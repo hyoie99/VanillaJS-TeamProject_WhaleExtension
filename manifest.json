@@ -13,7 +13,7 @@
     "persistent": false
   },
   "chrome_url_overrides": {
-    "PAGE_TO_OVERRIDE": "html/main.html"
+    "newtab": "html/main.html"
   },
   "permissions": ["tabs"]
 }
