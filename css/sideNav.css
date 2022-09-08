@@ -1,0 +1,22 @@
+#side-form #link-btns {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  background-color: white;
+}
+#side-form #link-btns a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#side-form #link-btns .current-page {
+  border-bottom: 4px solid black;
+}
+
+/*# sourceMappingURL=sideNav.css.map */

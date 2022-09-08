@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "글마카세",
+  "version": "1.0.0",
+
+  "description": "확장앱 설명",
+
+  "sidebar_action": {
+    "default_page": "html/sideToday.html"
+  },
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "chrome_url_overrides": {
+    "PAGE_TO_OVERRIDE": "html/main.html"
+  },
+  "permissions": ["tabs"]
+}

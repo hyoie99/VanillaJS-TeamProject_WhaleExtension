@@ -1,0 +1,30 @@
+form {
+  #today-cards {
+    margin-top: 46.5px;
+    border-top: 2px solid black;
+    #today-card {
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      background-color: rgb(112, 162, 36);
+      #emoji {
+        font-size: 50px;
+        margin: 0;
+      }
+      #text {
+        font-size: 22px;
+      }
+      #author {
+        display: flex;
+        justify-content: flex-end;
+      }
+      #delete-btn {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

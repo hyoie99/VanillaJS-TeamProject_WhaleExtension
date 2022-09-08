@@ -1,0 +1,48 @@
+form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form #today-cards {
+  display: flex;
+  margin-bottom: 50px;
+  text-align: center;
+}
+form #today-cards #today-card {
+  width: 300px;
+  height: 300px;
+  margin: 0 25px;
+  padding: 20px 20px 10px 20px;
+  border-radius: 10%;
+  background-color: rgb(235, 123, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+form #today-cards #today-card #emoji {
+  font-size: 50px;
+  margin: 0;
+}
+form #today-cards #today-card #text {
+  font-size: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+form #today-cards #today-card #author {
+  display: flex;
+  justify-content: flex-end;
+}
+form #today-cards #today-card #save-btn {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=mainStyle.css.map */
