@@ -27,6 +27,7 @@ export function saveCard(event) {
   let saving = localStorage.getItem("saving");
   // console.log(saving);
   if (saving == null) {
+    alert("저장되었습니다.");
     localStorage.setItem("saving", JSON.stringify([saveCard]));
   } else {
     saving = JSON.parse(saving);
@@ -37,6 +38,7 @@ export function saveCard(event) {
       }
     });
     if (isSaving == false) {
+      alert("저장되었습니다.");
       saving.push(saveCard);
       localStorage.setItem("saving", JSON.stringify(saving));
     }
