@@ -6,7 +6,8 @@
   "description": "확장앱 설명",
 
   "sidebar_action": {
-    "default_page": "html/sideToday.html"
+    "default_page": "html/sideToday.html",
+    "default_title": "글마카세"
   },
   "background": {
     "scripts": ["js/background.js"],

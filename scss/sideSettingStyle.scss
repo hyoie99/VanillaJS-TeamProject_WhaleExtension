@@ -1,6 +1,35 @@
 form {
-  #today-cards {
+  #settings {
     margin-top: 46.5px;
     border-top: 2px solid black;
+    #filters {
+      margin: 20px 10px 10px 10px;
+      // display: flex;
+      // flex-direction: column;
+      // // align-items: center;
+      h1 {
+        font-size: 15px;
+        // align-self: flex-start;
+      }
+      .filter {
+        text-align: center;
+        margin-bottom: 30px;
+        .selected {
+          background-color: black;
+          color: white;
+        }
+        button {
+          width: 95vw;
+          background-color: transparent;
+          padding: 10px 0;
+          border: 2px solid black;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        p {
+          color: rgb(125, 125, 125);
+        }
+      }
+    }
   }
 }

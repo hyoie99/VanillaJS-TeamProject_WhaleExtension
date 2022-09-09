@@ -1,5 +1,9 @@
-const phraseURL = "../json/text.json";
+import { filtering } from "./filterJSON.js";
+
+// const phraseURL = "../json/text.json";
+const phraseURL = await filtering();
 const emojiURL = "../json/emoji.json";
+console.log(phraseURL);
 
 const todayCards = document.querySelector("#today-cards");
 let id = 0;
@@ -24,10 +28,9 @@ export function createTextCard() {
   card.append(cardEmoji, cardText, cardAuthor, saveBtn);
 }
 
-function saveNewCard(cardID, emoji, text, author) {
+function saveNewCard(emoji, text, author) {
   let isDone = false;
   const card = {
-    id: cardID,
     emoji: emoji,
     text: text,
     author: author,
@@ -52,7 +55,8 @@ function saveNewCard(cardID, emoji, text, author) {
 }
 
 const getRandom = async (card) => {
-  const phraseJSON = await (await fetch(phraseURL)).json();
+  // const phraseJSON = await (await fetch(phraseURL)).json();
+  const phraseJSON = phraseURL;
   const emojiJSON = await (await fetch(emojiURL)).json();
 
   const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
@@ -62,7 +66,7 @@ const getRandom = async (card) => {
   const cardText = card.querySelector("#text");
   const cardAuthor = card.querySelector("#author");
 
-  const selectID = phraseJSON[phraseIndex].id;
+  // const selectID = phraseJSON[phraseIndex].id;
   const selectEmoji = emojiJSON[emojiIndex].emoji;
   const selectText = phraseJSON[phraseIndex].quote;
   const selectAuthor = phraseJSON[phraseIndex].author;
@@ -71,5 +75,5 @@ const getRandom = async (card) => {
   cardText.innerText = selectText;
   cardAuthor.innerText = selectAuthor;
 
-  saveNewCard(selectID, selectEmoji, selectText, selectAuthor);
+  saveNewCard(selectEmoji, selectText, selectAuthor);
 };
