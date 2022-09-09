@@ -2,6 +2,9 @@ form #today-cards {
   margin-top: 46.5px;
   border-top: 2px solid black;
 }
+form #today-cards h1 {
+  text-align: center;
+}
 form #today-cards #today-card {
   margin: 15px;
   padding: 15px;
