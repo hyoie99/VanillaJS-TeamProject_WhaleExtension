@@ -7,7 +7,7 @@ form {
       // display: flex;
       // flex-direction: column;
       // // align-items: center;
-      h1 {
+      .setting-title {
         font-size: 15px;
         // align-self: flex-start;
       }
@@ -28,6 +28,27 @@ form {
         }
         p {
           color: rgb(125, 125, 125);
+        }
+      }
+    }
+    #bg-custom {
+      margin: 20px 10px 10px 10px;
+      .setting-title {
+        font-size: 15px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        input {
+          border: 1px solid black;
+          margin-right: 15px;
+          background-color: transparent;
+          width: 80px;
+          height: 80px;
+          cursor: pointer;
+        }
+        span {
+          font-size: 15px;
         }
       }
     }

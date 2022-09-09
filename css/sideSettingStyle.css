@@ -5,7 +5,7 @@ form #settings {
 form #settings #filters {
   margin: 20px 10px 10px 10px;
 }
-form #settings #filters h1 {
+form #settings #filters .setting-title {
   font-size: 15px;
 }
 form #settings #filters .filter {
@@ -26,6 +26,27 @@ form #settings #filters .filter button {
 }
 form #settings #filters .filter p {
   color: rgb(125, 125, 125);
+}
+form #settings #bg-custom {
+  margin: 20px 10px 10px 10px;
+}
+form #settings #bg-custom .setting-title {
+  font-size: 15px;
+}
+form #settings #bg-custom div {
+  display: flex;
+  align-items: center;
+}
+form #settings #bg-custom div input {
+  border: 1px solid black;
+  margin-right: 15px;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+form #settings #bg-custom div span {
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=sideSettingStyle.css.map */

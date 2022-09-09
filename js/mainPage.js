@@ -2,7 +2,28 @@ import { createTextCard } from "./createCard.js";
 import { getTextCard } from "./getTodayCard.js";
 import { saveCard } from "./saveCard.js";
 
-const clearBtn = document.querySelector("#clear-btn");
+if (localStorage.getItem("bgColor") == null) {
+  localStorage.setItem("bgColor", "#ffffff");
+}
+if (localStorage.getItem("filter") == null) {
+  localStorage.setItem("filter", "three");
+}
+
+// const clearBtn = document.querySelector("#clear-btn");
+const body = document.querySelector("body");
+
+const bgColor = localStorage.getItem("bgColor");
+body.style.backgroundColor = bgColor;
+
+const today = new Date().getDate();
+const whatToday = localStorage.getItem("Date");
+if (whatToday == null) {
+  localStorage.setItem("Date", today);
+} else if (today != whatToday) {
+  localStorage.removeItem("today0");
+  localStorage.removeItem("today1");
+  localStorage.removeItem("today2");
+}
 
 if (localStorage.getItem("today0") !== null) {
   getTextCard("today0");
@@ -25,8 +46,8 @@ saveBtn.forEach((btn) => {
   btn.addEventListener("click", saveCard);
 });
 
-clearBtn.addEventListener("click", function () {
-  localStorage.removeItem("today0");
-  localStorage.removeItem("today1");
-  localStorage.removeItem("today2");
-});
+// clearBtn.addEventListener("click", function () {
+//   localStorage.removeItem("today0");
+//   localStorage.removeItem("today1");
+//   localStorage.removeItem("today2");
+// });
