@@ -1,5 +1,6 @@
 import { createTextCard } from "./createCard.js";
 import { getTextCard } from "./getTodayCard.js";
+import { addContent } from "./extraContent.js";
 import { saveCard } from "./saveCard.js";
 
 if (localStorage.getItem("bgColor") == null) {
@@ -38,6 +39,7 @@ if (localStorage.getItem("today0") !== null) {
     getTextCard("today1");
     if (localStorage.getItem("today2") !== null) {
       getTextCard("today2");
+      addContent();
     } else {
       createTextCard();
     }
