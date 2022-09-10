@@ -12,6 +12,7 @@
   border: 1px solid black;
   border-radius: 10px;
   padding: 10px 300px 10px 20px;
+  background-color: white;
 }
 #main #search a {
   font-size: 25px;
