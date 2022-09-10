@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main</title>
+    <title>새 탭</title>
     <link rel="stylesheet" href="../css/default.css" />
     <link rel="stylesheet" href="../css/mainStyle.css" />
   </head>
   <body>
-    <form>
+    <div id="main">
+      <form>
+        <div id="search">
+          <a href="https://www.naver.com/" target="_blank">N</a>
+          <input type="text" name="" id="" placeholder="검색어를 입력하세요." />
+        </div>
+      </form>
       <div id="today-cards"></div>
-      <!-- <button id="clear-btn">clear</button> -->
-    </form>
+    </div>
   </body>
-  <script src="../js/submitForm.js"></script>
+  <script src="../js/searchForm.js"></script>
   <script type="module" src="../js/mainPage.js"></script>
   <!-- <script src="../js/filterJSON.js"></script> -->
   <!-- <script type="module" src="../js/deleteCard.js"></script> -->

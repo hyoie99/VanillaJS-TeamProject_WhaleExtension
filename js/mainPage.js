@@ -20,6 +20,7 @@ const whatToday = localStorage.getItem("Date");
 if (whatToday == null) {
   localStorage.setItem("Date", today);
 } else if (today != whatToday) {
+  localStorage.setItem("Date", today);
   localStorage.removeItem("today0");
   localStorage.removeItem("today1");
   localStorage.removeItem("today2");

@@ -25,9 +25,6 @@ function getFilter() {
   });
 }
 
-if (localStorage.getItem("filter") == null) {
-  localStorage.setItem("filter", "filter-three");
-}
 getFilter();
 whale.sidebarAction.onClicked.addListener(function (result) {
   window.location.reload();

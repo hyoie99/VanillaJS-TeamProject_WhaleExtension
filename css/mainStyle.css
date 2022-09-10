@@ -1,16 +1,35 @@
-form {
+#main {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-form #today-cards {
+#main #search {
   display: flex;
+  align-items: center;
   margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 300px 10px 20px;
+}
+#main #search a {
+  font-size: 25px;
+  margin-right: 15px;
+  text-decoration: none;
+  color: green;
+  font-weight: 700;
+}
+#main #search input {
+  border: none;
+  font-size: 18px;
+  outline: none;
+}
+#main #today-cards {
+  display: flex;
   text-align: center;
 }
-form #today-cards #today-card {
+#main #today-cards #today-card {
   width: 300px;
   height: 300px;
   margin: 0 25px;
@@ -21,11 +40,11 @@ form #today-cards #today-card {
   flex-direction: column;
   justify-content: space-around;
 }
-form #today-cards #today-card #emoji {
+#main #today-cards #today-card #emoji {
   font-size: 50px;
   margin: 0;
 }
-form #today-cards #today-card #text {
+#main #today-cards #today-card #text {
   font-size: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -33,11 +52,11 @@ form #today-cards #today-card #text {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-form #today-cards #today-card #author {
+#main #today-cards #today-card #author {
   display: flex;
   justify-content: flex-end;
 }
-form #today-cards #today-card #save-btn {
+#main #today-cards #today-card #save-btn {
   display: flex;
   border: none;
   background-color: transparent;
