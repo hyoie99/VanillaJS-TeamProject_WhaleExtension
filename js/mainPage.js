@@ -11,9 +11,15 @@ if (localStorage.getItem("filter") == null) {
 
 // const clearBtn = document.querySelector("#clear-btn");
 const body = document.querySelector("body");
+const searchBar = document.querySelector("#search");
 
 const bgColor = localStorage.getItem("bgColor");
 body.style.backgroundColor = bgColor;
+if (bgColor == "#ffffff") {
+  searchBar.style.border = "1px solid black";
+} else {
+  searchBar.style.border = "1px solid white";
+}
 
 const today = new Date().getDate();
 const whatToday = localStorage.getItem("Date");
