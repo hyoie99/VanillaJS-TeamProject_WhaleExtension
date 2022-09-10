@@ -2,28 +2,27 @@ form #today-cards {
   margin-top: 46.5px;
   border-top: 2px solid black;
 }
-form #today-cards #today-card {
+form #today-cards #today-card #data {
   margin: 15px;
   padding: 15px;
-  border-radius: 15px;
   background-color: coral;
 }
-form #today-cards #today-card #emoji {
+form #today-cards #today-card #data #emoji {
   font-size: 50px;
   margin: 0;
 }
-form #today-cards #today-card #text {
+form #today-cards #today-card #data #text {
   font-size: 22px;
 }
-form #today-cards #today-card #author {
+form #today-cards #today-card #data #author {
   display: flex;
   justify-content: flex-end;
 }
-form #today-cards #today-card #save-btn {
-  display: flex;
+form #today-cards #today-card #btns #save-btn,
+form #today-cards #today-card #btns #cap-btn {
+  margin: 5px 15px;
   border: none;
   background-color: transparent;
-  color: white;
   cursor: pointer;
 }
 

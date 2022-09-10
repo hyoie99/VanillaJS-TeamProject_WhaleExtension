@@ -1,5 +1,6 @@
-import { getTextCard } from "./getTodayCard.js";
+import { getTextCard } from "./getSideCard.js";
 import { saveCard } from "./saveCard.js";
+import { captureCard } from "./captureCard.js";
 
 function openSidebar() {
   if (localStorage.getItem("today0") !== null) {
@@ -20,6 +21,10 @@ whale.sidebarAction.onClicked.addListener(function (result) {
 });
 
 const saveBtn = document.querySelectorAll("#save-btn");
+const captureBtn = document.querySelectorAll("#cap-btn");
 saveBtn.forEach((btn) => {
   btn.addEventListener("click", saveCard);
+});
+captureBtn.forEach((btn) => {
+  btn.addEventListener("click", captureCard);
 });
