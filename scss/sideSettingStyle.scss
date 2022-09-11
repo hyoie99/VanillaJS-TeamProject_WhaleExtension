@@ -20,13 +20,17 @@ form {
           width: 95vw;
           background-color: transparent;
           padding: 10px 0;
+          margin-bottom: 15px;
           border: 2px solid black;
           border-radius: 5px;
           cursor: pointer;
         }
-        p {
+        span {
           color: rgb(125, 125, 125);
         }
+      }
+      span {
+        font-size: 15px;
       }
     }
     #bg-custom {
@@ -57,7 +61,7 @@ form {
             width: 40px;
           }
         }
-        p {
+        span {
           font-size: 15px;
         }
       }

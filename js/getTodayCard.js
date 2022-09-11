@@ -17,6 +17,7 @@ export function getTextCard(cardArray) {
 
   cardEmoji.innerText = getCard.emoji;
   cardText.innerText = getCard.text;
+  // cardText.innerText = localStorage.getItem("filter");
   cardAuthor.innerText = getCard.author;
   saveBtn.innerText = "저장하기";
 

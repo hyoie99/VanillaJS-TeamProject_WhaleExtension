@@ -3,6 +3,10 @@ const btns = document.querySelectorAll("button");
 function selectBtn(event) {
   const selectedBtn = event.target;
 
+  localStorage.removeItem("today0");
+  localStorage.removeItem("today1");
+  localStorage.removeItem("today2");
+
   btns.forEach((btn) => {
     btn.classList.remove("selected");
   });

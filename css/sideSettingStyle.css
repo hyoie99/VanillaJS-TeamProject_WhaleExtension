@@ -20,12 +20,16 @@ form #settings #filters .filter button {
   width: 95vw;
   background-color: transparent;
   padding: 10px 0;
+  margin-bottom: 15px;
   border: 2px solid black;
   border-radius: 5px;
   cursor: pointer;
 }
-form #settings #filters .filter p {
+form #settings #filters .filter span {
   color: rgb(125, 125, 125);
+}
+form #settings #filters span {
+  font-size: 15px;
 }
 form #settings #bg-custom div {
   display: flex;
@@ -52,7 +56,7 @@ form #settings #send-msg #link a {
 form #settings #send-msg #link a img {
   width: 40px;
 }
-form #settings #send-msg #link p {
+form #settings #send-msg #link span {
   font-size: 15px;
 }
 
