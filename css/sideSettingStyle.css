@@ -26,6 +26,7 @@ form #settings #filters .filter button {
   cursor: pointer;
 }
 form #settings #filters .filter span {
+  display: block;
   color: rgb(125, 125, 125);
 }
 form #settings #filters span {
