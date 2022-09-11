@@ -1,6 +1,7 @@
 import { createTextCard } from "./createCard.js";
 import { getTextCard } from "./getTodayCard.js";
 import { addContent } from "./extraContent.js";
+import { textPopup } from "./textPopup.js";
 import { saveCard } from "./saveCard.js";
 
 if (localStorage.getItem("bgColor") == null) {
@@ -50,11 +51,29 @@ if (localStorage.getItem("today0") !== null) {
   createTextCard();
 }
 
+const main = document.querySelector("#main");
+const form = document.querySelector("form");
+const todayCards = document.querySelector("#today-cards");
+const text = document.querySelectorAll("#text");
+const popCard = document.querySelector("#pop-card");
+text.forEach((text) => {
+  text.addEventListener("click", function () {
+    textPopup(event);
+    popCard.style.display = "block";
+  });
+});
+
 const saveBtn = document.querySelectorAll("#save-btn");
 saveBtn.forEach((btn) => {
   btn.addEventListener("click", saveCard);
 });
-
+const closeBtn = document.querySelector("#close-btn");
+closeBtn.addEventListener("click", function () {
+  main.classList = "";
+  form.style.visibility = "visible";
+  todayCards.style.opacity = "1";
+  popCard.style.display = "none";
+});
 // clearBtn.addEventListener("click", function () {
 //   localStorage.removeItem("today0");
 //   localStorage.removeItem("today1");

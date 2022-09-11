@@ -1,11 +1,14 @@
-#main {
+body .popup-wrap {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+body #main {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#main #search {
+body #main #search {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
@@ -13,23 +16,23 @@
   padding: 10px 300px 10px 20px;
   background-color: white;
 }
-#main #search a {
+body #main #search a {
   font-size: 25px;
   margin-right: 15px;
   text-decoration: none;
   color: green;
   font-weight: 700;
 }
-#main #search input {
+body #main #search input {
   border: none;
   font-size: 18px;
   outline: none;
 }
-#main #today-cards {
+body #main #today-cards {
   display: flex;
   text-align: center;
 }
-#main #today-cards #today-card {
+body #main #today-cards #today-card {
   width: 250px;
   height: 250px;
   margin: 0 25px;
@@ -40,27 +43,46 @@
   flex-direction: column;
   justify-content: space-around;
 }
-#main #today-cards #today-card #emoji {
+body #main #today-cards #today-card #emoji {
   font-size: 50px;
   margin: 0;
 }
-#main #today-cards #today-card #text {
+body #main #today-cards #today-card #text {
   font-size: 22px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  cursor: pointer;
 }
-#main #today-cards #today-card #author {
+body #main #today-cards #today-card #author {
   display: flex;
   justify-content: flex-end;
 }
-#main #today-cards #today-card #save-btn {
+body #main #today-cards #today-card #save-btn {
   display: flex;
   border: none;
   background-color: transparent;
   color: white;
+  cursor: pointer;
+}
+body #main #pop-card {
+  display: none;
+  padding: 15px;
+  width: 500px;
+  position: fixed;
+  background-color: white;
+  border: 1.5px solid gray;
+  border-radius: 10px;
+}
+body #main #pop-card p {
+  font-size: 22px;
+  text-align: center;
+}
+body #main #pop-card button {
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
