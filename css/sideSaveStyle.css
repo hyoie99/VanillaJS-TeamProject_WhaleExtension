@@ -8,7 +8,6 @@ form #today-cards h1 {
 form #today-cards #today-card {
   margin: 15px;
   padding: 15px;
-  border-radius: 15px;
   background-color: rgb(112, 162, 36);
 }
 form #today-cards #today-card #emoji {

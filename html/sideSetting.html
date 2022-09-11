@@ -17,7 +17,7 @@
         <a href="sideSetting.html" class="current-page">설정</a>
       </div>
       <div id="settings">
-        <div id="filters">
+        <div id="filters" class="setting-div">
           <h1 class="setting-title">글 맛 필터</h1>
           <div class="filter one">
             <button>매운 맛</button>
@@ -32,7 +32,7 @@
             <p>설명</p>
           </div>
         </div>
-        <div id="bg-custom">
+        <div id="bg-custom" class="setting-div">
           <h1 class="setting-title">배경화면 설정</h1>
           <div>
             <input type="color" name="" id="" />
@@ -41,10 +41,23 @@
             </span>
           </div>
         </div>
+        <div id="send-msg" class="setting-div">
+          <h1 class="setting-title">문장 제보</h1>
+          <div id="link">
+            <a href="http://www.naver.com" target="_blank">
+              <img src="../img/Email-Letter-Mail-1024.webp" alt="" />
+            </a>
+            <p>왼쪽 아이콘을 누르면 링크로 연결됩니다.</p>
+          </div>
+        </div>
       </div>
     </form>
   </body>
   <script src="../js/submitForm.js"></script>
   <script src="../js/changeFilter.js"></script>
   <script src="../js/changeBG.js"></script>
+  <script
+    src="https://kit.fontawesome.com/ea015f8868.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

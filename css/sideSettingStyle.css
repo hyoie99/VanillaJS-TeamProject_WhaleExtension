@@ -2,10 +2,10 @@ form #settings {
   margin-top: 46.5px;
   border-top: 2px solid black;
 }
-form #settings #filters {
+form #settings .setting-div {
   margin: 20px 10px 10px 10px;
 }
-form #settings #filters .setting-title {
+form #settings .setting-div .setting-title {
   font-size: 15px;
 }
 form #settings #filters .filter {
@@ -27,12 +27,6 @@ form #settings #filters .filter button {
 form #settings #filters .filter p {
   color: rgb(125, 125, 125);
 }
-form #settings #bg-custom {
-  margin: 20px 10px 10px 10px;
-}
-form #settings #bg-custom .setting-title {
-  font-size: 15px;
-}
 form #settings #bg-custom div {
   display: flex;
   align-items: center;
@@ -46,6 +40,19 @@ form #settings #bg-custom div input {
   cursor: pointer;
 }
 form #settings #bg-custom div span {
+  font-size: 15px;
+}
+form #settings #send-msg #link {
+  display: flex;
+  align-items: center;
+}
+form #settings #send-msg #link a {
+  margin-right: 15px;
+}
+form #settings #send-msg #link a img {
+  width: 40px;
+}
+form #settings #send-msg #link p {
   font-size: 15px;
 }
 
