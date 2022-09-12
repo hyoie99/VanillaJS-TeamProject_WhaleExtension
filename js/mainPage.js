@@ -4,7 +4,10 @@ import { addContent } from "./extraContent.js";
 import { textPopup } from "./textPopup.js";
 import { saveCard } from "./saveCard.js";
 
-if (localStorage.getItem("bgColor") == null) {
+if (
+  (localStorage.getItem("bgColor") == null) &
+  (localStorage.getItem("bgImg") == null)
+) {
   localStorage.setItem("bgColor", "#ffffff");
 }
 if (localStorage.getItem("filter") == null) {
@@ -16,7 +19,14 @@ const body = document.querySelector("body");
 const searchBar = document.querySelector("#search");
 
 const bgColor = localStorage.getItem("bgColor");
-body.style.backgroundColor = bgColor;
+if (bgColor !== null) {
+  body.style.backgroundColor = bgColor;
+} else {
+  const imgUrl = localStorage.getItem("bgImg");
+  body.style.backgroundImage = `url("${imgUrl}")`;
+  body.style.backgroundRepeat = "no repeat";
+  body.style.backgroundSize = "cover";
+}
 if (bgColor == "#ffffff") {
   searchBar.style.border = "1px solid black";
 } else {

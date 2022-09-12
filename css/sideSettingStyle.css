@@ -32,11 +32,12 @@ form #settings #filters .filter span {
 form #settings #filters span {
   font-size: 15px;
 }
-form #settings #bg-custom div {
+form #settings #bg-custom #bg-color {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
-form #settings #bg-custom div input {
+form #settings #bg-custom #bg-color input {
   border: 1px solid black;
   margin-right: 15px;
   background-color: transparent;
@@ -44,7 +45,10 @@ form #settings #bg-custom div input {
   height: 80px;
   cursor: pointer;
 }
-form #settings #bg-custom div span {
+form #settings #bg-custom #bg-img {
+  margin-bottom: 15px;
+}
+form #settings #bg-custom span {
   font-size: 15px;
 }
 form #settings #send-msg #link {

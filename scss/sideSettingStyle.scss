@@ -35,9 +35,10 @@ form {
       }
     }
     #bg-custom {
-      div {
+      #bg-color {
         display: flex;
         align-items: center;
+        margin-bottom: 15px;
         input {
           border: 1px solid black;
           margin-right: 15px;
@@ -46,9 +47,12 @@ form {
           height: 80px;
           cursor: pointer;
         }
-        span {
-          font-size: 15px;
-        }
+      }
+      #bg-img {
+        margin-bottom: 15px;
+      }
+      span {
+        font-size: 15px;
       }
     }
     #send-msg {
