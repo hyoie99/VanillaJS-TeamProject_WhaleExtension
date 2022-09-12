@@ -49,6 +49,7 @@ body #main #today-cards #today-card #emoji {
 }
 body #main #today-cards #today-card #text {
   font-size: 22px;
+  margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
