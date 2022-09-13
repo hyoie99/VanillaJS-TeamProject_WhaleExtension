@@ -1,12 +1,38 @@
+import { filteringContent } from "./filterJSON.js";
+
+const contentURL = await filteringContent();
 const todayCards = document.querySelector("#today-cards");
 
+function getRandom(extra) {
+  const contentJSON = contentURL;
+  const contentIndex = Math.floor(Math.random() * contentJSON.length);
+
+  const extraTitle = extra.querySelector("#title");
+
+  const selectTitle = contentJSON[contentIndex].title;
+  const selectLink = contentJSON[contentIndex].link;
+
+  extraTitle.innerText = selectTitle;
+  extraTitle.setAttribute("href", `${selectLink}`);
+  extraTitle.setAttribute("target", "_blank");
+
+  saveExtraCard(selectTitle, selectLink);
+}
+
 export function addContent() {
-  const card = document.createElement("div");
-  const h1 = document.createElement("h1");
+  const extra = document.createElement("div");
+  const title = document.createElement("a");
 
-  card.setAttribute("id", "today-card");
-  h1.innerText = "content";
+  extra.setAttribute("id", "today-card");
+  title.setAttribute("id", "title");
 
-  todayCards.append(card);
-  card.append(h1);
+  extra.append(title);
+  getRandom(extra);
+
+  todayCards.append(extra);
+}
+
+function saveExtraCard(title, link) {
+  const card = { title: title, link: link };
+  localStorage.setItem("extraContent", JSON.stringify(card));
 }

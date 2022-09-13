@@ -6,8 +6,8 @@ const savedfilter = localStorage.getItem("filter");
 const phraseURL = "../json/text.json";
 const emojiURL = "../json/emoji.json";
 const fontURL = "../json/font.json";
+const contentURL = "../json/content.json";
 
-// console.log(savedfilter);
 export const filteringPhrase = async () => {
   const phraseJson = await (await fetch(phraseURL)).json();
 
@@ -45,4 +45,17 @@ export const filteringFont = async () => {
   });
 
   return newFontJson;
+};
+
+export const filteringContent = async () => {
+  const contentJson = await (await fetch(contentURL)).json();
+
+  let newContentJson = [];
+  contentJson.forEach((element) => {
+    if (element.filter == savedfilter) {
+      newContentJson.push(element);
+    }
+  });
+
+  return newContentJson;
 };

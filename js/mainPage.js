@@ -1,6 +1,7 @@
 import { createTextCard } from "./createCard.js";
 import { getTextCard } from "./getTodayCard.js";
 import { addContent } from "./extraContent.js";
+import { getExtraCard } from "./getExtraCard.js";
 import { textPopup } from "./textPopup.js";
 import { saveTodayCard } from "./saveCard.js";
 
@@ -59,7 +60,11 @@ if (localStorage.getItem("today0") !== null) {
     getTextCard("today1");
     if (localStorage.getItem("today2") !== null) {
       getTextCard("today2");
-      addContent();
+      if (localStorage.getItem("extraContent") !== null) {
+        getExtraCard();
+      } else {
+        addContent();
+      }
     } else {
       createTextCard();
     }
@@ -97,4 +102,5 @@ clearBtn.addEventListener("click", function () {
   localStorage.removeItem("today0");
   localStorage.removeItem("today1");
   localStorage.removeItem("today2");
+  localStorage.removeItem("extraContent");
 });
