@@ -23,7 +23,7 @@ if (
   localStorage.setItem("bgColor", "#ffffff");
 }
 
-// const clearBtn = document.querySelector("#clear-btn");
+const clearBtn = document.querySelector("#clear-btn");
 const body = document.querySelector("body");
 const searchBar = document.querySelector("#search");
 
@@ -93,8 +93,8 @@ closeBtn.addEventListener("click", function () {
   todayCards.style.opacity = "1";
   popCard.style.display = "none";
 });
-// clearBtn.addEventListener("click", function () {
-//   localStorage.removeItem("today0");
-//   localStorage.removeItem("today1");
-//   localStorage.removeItem("today2");
-// });
+clearBtn.addEventListener("click", function () {
+  localStorage.removeItem("today0");
+  localStorage.removeItem("today1");
+  localStorage.removeItem("today2");
+});

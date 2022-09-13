@@ -69,6 +69,12 @@ body #main #today-cards #today-card #save-btn {
   color: white;
   cursor: pointer;
 }
+body #main #clear-btn {
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
 body #main #pop-card {
   display: none;
   padding: 15px;
