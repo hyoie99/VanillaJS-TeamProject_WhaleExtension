@@ -13,7 +13,7 @@ body #main #search {
   align-items: center;
   margin-bottom: 50px;
   border-radius: 10px;
-  padding: 10px 300px 10px 20px;
+  padding: 10px 20px 10px 20px;
   background-color: white;
 }
 body #main #search a {
@@ -24,6 +24,7 @@ body #main #search a {
   font-weight: 700;
 }
 body #main #search input {
+  width: 500px;
   border: none;
   font-size: 18px;
   outline: none;
