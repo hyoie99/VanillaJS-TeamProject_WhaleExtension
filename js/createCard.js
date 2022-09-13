@@ -1,36 +1,41 @@
 import { filteringPhrase } from "./filterJSON.js";
 import { filteringEmoji } from "./filterJSON.js";
+import { filteringFont } from "./filterJSON.js";
 
 const phraseURL = await filteringPhrase();
-// const emojiURL = "../json/emoji.json";
 const emojiURL = await filteringEmoji();
+const fontURL = await filteringFont();
 
 const todayCards = document.querySelector("#today-cards");
 let id = 0;
 
 function getRandom(card) {
-  // console.log(card);
-  // const phraseJSON = await (await fetch(phraseURL)).json();
   const phraseJSON = phraseURL;
-  // const emojiJSON = await (await fetch(emojiURL)).json();
   const emojiJSON = emojiURL;
+  const fontJSON = fontURL;
 
   const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
   const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
+  const fontIndex = Math.floor(Math.random() * fontJSON.length);
 
   const cardEmoji = card.querySelector("#emoji");
   const cardText = card.querySelector("#text");
   const cardAuthor = card.querySelector("#author");
 
   const selectEmoji = emojiJSON[emojiIndex].emoji;
+  const selectFont = fontJSON[fontIndex].fontFamily;
   const selectText = phraseJSON[phraseIndex].text;
   const selectAuthor = phraseJSON[phraseIndex].source;
 
   cardEmoji.setAttribute("src", `${selectEmoji}`);
+
+  cardText.style.fontFamily = `${selectFont}`;
   cardText.innerText = selectText;
+
+  cardAuthor.style.fontFamily = `${selectFont}`;
   cardAuthor.innerText = selectAuthor;
 
-  saveNewCard(selectEmoji, selectText, selectAuthor);
+  saveNewCard(selectEmoji, selectText, selectAuthor, selectFont);
 }
 
 export function createTextCard() {
@@ -53,12 +58,13 @@ export function createTextCard() {
   saveBtn.innerText = "저장하기";
 }
 
-function saveNewCard(emoji, text, author) {
+function saveNewCard(emoji, text, author, font) {
   let isDone = false;
   const card = {
     emoji: emoji,
     text: text,
     author: author,
+    font: font,
   };
 
   //   if (localStorage.getItem("todayCard") == null) {

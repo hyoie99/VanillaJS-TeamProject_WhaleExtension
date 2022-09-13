@@ -2,7 +2,7 @@ import { createTextCard } from "./createCard.js";
 import { getTextCard } from "./getTodayCard.js";
 import { addContent } from "./extraContent.js";
 import { textPopup } from "./textPopup.js";
-import { saveCard } from "./saveCard.js";
+import { saveTodayCard } from "./saveCard.js";
 
 const today = new Date().getDate();
 // const today = 15;
@@ -84,7 +84,7 @@ text.forEach((text) => {
 
 const saveBtn = document.querySelectorAll("#save-btn");
 saveBtn.forEach((btn) => {
-  btn.addEventListener("click", saveCard);
+  btn.addEventListener("click", saveTodayCard);
 });
 const closeBtn = document.querySelector("#close-btn");
 closeBtn.addEventListener("click", function () {

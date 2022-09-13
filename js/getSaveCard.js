@@ -18,10 +18,14 @@ export function getTextCard(cardArray) {
     cardAuthor.setAttribute("id", "author");
     deleteBtn.setAttribute("id", "delete-btn");
 
-    // cardEmoji.innerText = getCard.emoji;
     cardEmoji.setAttribute("src", `${getCard.emoji}`);
+
+    cardText.style.fontFamily = `${getCard.font}`;
     cardText.innerText = getCard.text;
+
+    cardAuthor.style.fontFamily = `${getCard.font}`;
     cardAuthor.innerText = getCard.author;
+
     deleteBtn.innerText = "삭제하기";
 
     todayCards.append(card);

@@ -15,11 +15,14 @@ export function getTextCard(cardArray) {
   cardAuthor.setAttribute("id", "author");
   saveBtn.setAttribute("id", "save-btn");
 
-  // cardEmoji.innerText = getCard.emoji;
   cardEmoji.setAttribute("src", `${getCard.emoji}`);
+
+  cardText.style.fontFamily = `${getCard.font}`;
   cardText.innerText = getCard.text;
-  // cardText.innerText = localStorage.getItem("filter");
+
+  cardAuthor.style.fontFamily = `${getCard.font}`;
   cardAuthor.innerText = getCard.author;
+
   saveBtn.innerText = "저장하기";
 
   todayCards.append(card);

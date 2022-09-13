@@ -25,8 +25,13 @@ export function getTextCard(cardArray) {
 
   // cardEmoji.innerText = getCard.emoji;
   cardEmoji.setAttribute("src", `${getCard.emoji}`);
+
+  cardText.style.fontFamily = `${getCard.font}`;
   cardText.innerText = getCard.text;
+
+  cardAuthor.style.fontFamily = `${getCard.font}`;
   cardAuthor.innerText = getCard.author;
+
   saveBtn.innerText = "저장하기";
   captureBtn.innerText = "캡쳐하기";
 

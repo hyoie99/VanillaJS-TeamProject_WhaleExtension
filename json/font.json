@@ -1,0 +1,47 @@
+[
+  {
+    "filter": "comfort",
+    "name": "함박눈체",
+    "fontFamily": "SF_HambakSnow"
+  },
+  {
+    "filter": "comfort",
+    "name": "다이어리체",
+    "fontFamily": "EarlyFontDiary"
+  },
+  {
+    "filter": "comfort",
+    "name": "바른바탕체",
+    "fontFamily": "BareunBatang"
+  },
+  {
+    "filter": "provoke",
+    "name": "코트라도약",
+    "fontFamily": "KOTRALEAP"
+  },
+  {
+    "filter": "provoke",
+    "name": "설립체유건욱",
+    "fontFamily": "establishRetrosansOTF"
+  },
+  {
+    "filter": "provoke",
+    "name": "세방고딕",
+    "fontFamily": "SEBANG_Gothic_Bold"
+  },
+  {
+    "filter": "encourage",
+    "name": "해피니스",
+    "fontFamily": "Happiness-Sans-Bold"
+  },
+  {
+    "filter": "encourage",
+    "name": "함렛",
+    "fontFamily": "Hahmlet-Regular"
+  },
+  {
+    "filter": "encourage",
+    "name": "어그로체",
+    "fontFamily": "SBAggroB"
+  }
+]
