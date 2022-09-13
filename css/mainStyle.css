@@ -44,7 +44,8 @@ body #main #today-cards #today-card {
   justify-content: space-around;
 }
 body #main #today-cards #today-card #emoji {
-  font-size: 50px;
+  align-self: center;
+  width: 70px;
   margin: 0;
 }
 body #main #today-cards #today-card #text {

@@ -4,14 +4,23 @@ import { addContent } from "./extraContent.js";
 import { textPopup } from "./textPopup.js";
 import { saveCard } from "./saveCard.js";
 
+const today = new Date().getDate();
+// const today = 15;
+const whatToday = localStorage.getItem("Date");
+if (whatToday == null) {
+  localStorage.setItem("Date", today);
+} else if (today != whatToday) {
+  localStorage.setItem("Date", today);
+  localStorage.removeItem("today0");
+  localStorage.removeItem("today1");
+  localStorage.removeItem("today2");
+}
+
 if (
   (localStorage.getItem("bgColor") == null) &
   (localStorage.getItem("bgImg") == null)
 ) {
   localStorage.setItem("bgColor", "#ffffff");
-}
-if (localStorage.getItem("filter") == null) {
-  localStorage.setItem("filter", "three");
 }
 
 // const clearBtn = document.querySelector("#clear-btn");
@@ -33,16 +42,16 @@ if (bgColor == "#ffffff") {
   searchBar.style.border = "1px solid white";
 }
 
-const today = new Date().getDate();
-const whatToday = localStorage.getItem("Date");
-if (whatToday == null) {
-  localStorage.setItem("Date", today);
-} else if (today != whatToday) {
-  localStorage.setItem("Date", today);
-  localStorage.removeItem("today0");
-  localStorage.removeItem("today1");
-  localStorage.removeItem("today2");
-}
+// const today = new Date().getDate();
+// const whatToday = localStorage.getItem("Date");
+// if (whatToday == null) {
+//   localStorage.setItem("Date", today);
+// } else if (today != whatToday) {
+//   localStorage.setItem("Date", today);
+//   localStorage.removeItem("today0");
+//   localStorage.removeItem("today1");
+//   localStorage.removeItem("today2");
+// }
 
 if (localStorage.getItem("today0") !== null) {
   getTextCard("today0");

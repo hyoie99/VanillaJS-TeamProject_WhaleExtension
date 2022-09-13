@@ -1,16 +1,41 @@
-import { filtering } from "./filterJSON.js";
+import { filteringPhrase } from "./filterJSON.js";
+import { filteringEmoji } from "./filterJSON.js";
 
-// const phraseURL = "../json/text.json";
-const phraseURL = await filtering();
-const emojiURL = "../json/emoji.json";
-console.log(phraseURL);
+const phraseURL = await filteringPhrase();
+// const emojiURL = "../json/emoji.json";
+const emojiURL = await filteringEmoji();
 
 const todayCards = document.querySelector("#today-cards");
 let id = 0;
 
+function getRandom(card) {
+  // console.log(card);
+  // const phraseJSON = await (await fetch(phraseURL)).json();
+  const phraseJSON = phraseURL;
+  // const emojiJSON = await (await fetch(emojiURL)).json();
+  const emojiJSON = emojiURL;
+
+  const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
+  const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
+
+  const cardEmoji = card.querySelector("#emoji");
+  const cardText = card.querySelector("#text");
+  const cardAuthor = card.querySelector("#author");
+
+  const selectEmoji = emojiJSON[emojiIndex].emoji;
+  const selectText = phraseJSON[phraseIndex].text;
+  const selectAuthor = phraseJSON[phraseIndex].source;
+
+  cardEmoji.setAttribute("src", `${selectEmoji}`);
+  cardText.innerText = selectText;
+  cardAuthor.innerText = selectAuthor;
+
+  saveNewCard(selectEmoji, selectText, selectAuthor);
+}
+
 export function createTextCard() {
   const card = document.createElement("div");
-  const cardEmoji = document.createElement("p");
+  const cardEmoji = document.createElement("img");
   const cardText = document.createElement("p");
   const cardAuthor = document.createElement("p");
   const saveBtn = document.createElement("button");
@@ -21,11 +46,11 @@ export function createTextCard() {
   cardAuthor.setAttribute("id", "author");
   saveBtn.setAttribute("id", "save-btn");
 
-  getRandom(card);
-  saveBtn.innerText = "저장하기";
-
   todayCards.append(card);
   card.append(cardEmoji, cardText, cardAuthor, saveBtn);
+
+  getRandom(card);
+  saveBtn.innerText = "저장하기";
 }
 
 function saveNewCard(emoji, text, author) {
@@ -53,27 +78,3 @@ function saveNewCard(emoji, text, author) {
     }
   }
 }
-
-const getRandom = async (card) => {
-  // const phraseJSON = await (await fetch(phraseURL)).json();
-  const phraseJSON = phraseURL;
-  const emojiJSON = await (await fetch(emojiURL)).json();
-
-  const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
-  const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
-
-  const cardEmoji = card.querySelector("#emoji");
-  const cardText = card.querySelector("#text");
-  const cardAuthor = card.querySelector("#author");
-
-  // const selectID = phraseJSON[phraseIndex].id;
-  const selectEmoji = emojiJSON[emojiIndex].emoji;
-  const selectText = phraseJSON[phraseIndex].quote;
-  const selectAuthor = phraseJSON[phraseIndex].author;
-
-  cardEmoji.innerText = selectEmoji;
-  cardText.innerText = selectText;
-  cardAuthor.innerText = selectAuthor;
-
-  saveNewCard(selectEmoji, selectText, selectAuthor);
-};

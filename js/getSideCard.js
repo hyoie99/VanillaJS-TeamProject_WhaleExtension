@@ -7,7 +7,7 @@ export function getTextCard(cardArray) {
   const data = document.createElement("div");
   const btns = document.createElement("div");
 
-  const cardEmoji = document.createElement("p");
+  const cardEmoji = document.createElement("img");
   const cardText = document.createElement("p");
   const cardAuthor = document.createElement("p");
   const saveBtn = document.createElement("button");
@@ -23,7 +23,8 @@ export function getTextCard(cardArray) {
   saveBtn.setAttribute("id", "save-btn");
   captureBtn.setAttribute("id", "cap-btn");
 
-  cardEmoji.innerText = getCard.emoji;
+  // cardEmoji.innerText = getCard.emoji;
+  cardEmoji.setAttribute("src", `${getCard.emoji}`);
   cardText.innerText = getCard.text;
   cardAuthor.innerText = getCard.author;
   saveBtn.innerText = "저장하기";

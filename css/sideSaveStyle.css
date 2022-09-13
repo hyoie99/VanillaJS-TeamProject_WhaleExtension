@@ -11,7 +11,7 @@ form #today-cards #today-card {
   background-color: rgb(112, 162, 36);
 }
 form #today-cards #today-card #emoji {
-  font-size: 50px;
+  width: 70px;
   margin: 0;
 }
 form #today-cards #today-card #text {

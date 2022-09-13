@@ -1,9 +1,10 @@
 // let id = 0;
 
 export function saveCard(event) {
-  const saveTarget = event.path[1].previousSibling;
+  // const saveTarget = event.path[1].previousSibling;
+  const saveTarget = event.path[1];
 
-  const saveEmoji = saveTarget.querySelector("#emoji").innerText;
+  const saveEmoji = saveTarget.querySelector("#emoji").src;
   const saveText = saveTarget.querySelector("#text").innerText;
   const saveAuthor = saveTarget.querySelector("#author").innerText;
 
