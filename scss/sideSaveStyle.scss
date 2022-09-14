@@ -1,33 +1,50 @@
 form {
   #today-cards {
-    margin-top: 46.5px;
-    border-top: 2px solid black;
-    h1 {
-      text-align: center;
-    }
+    // margin-top: 46.5px;
+    margin-top: 65px;
+    // border-top: 2px solid black;
     #today-card {
+      position: relative;
       margin: 15px;
       padding: 15px;
-      // border-radius: 15px;
+      border-radius: 30px;
       background-color: rgb(112, 162, 36);
+      text-align: center;
       #emoji {
         // font-size: 50px;
-        width: 70px;
+        width: 122px;
         margin: 0;
       }
       #text {
-        font-size: 22px;
+        font-size: 24px;
+        color: white;
       }
       #author {
-        display: flex;
-        justify-content: flex-end;
-      }
-      #delete-btn {
-        display: flex;
-        border: none;
-        background-color: transparent;
+        font-size: 14px;
         color: white;
+      }
+      #mark-icon {
+        position: absolute;
+        left: 88%;
+        right: 11.79%;
+        top: 8.64%;
+        bottom: 89.43%;
         cursor: pointer;
+      }
+    }
+    #no-saving {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+      img {
+        width: 122px;
+      }
+      p {
+        font-size: 24px;
+        color: #555555;
+        font-family: "HSSaemaul-Regular";
       }
     }
   }

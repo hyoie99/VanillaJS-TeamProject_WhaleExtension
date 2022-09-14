@@ -28,21 +28,33 @@ function getRandom(card) {
 
   const selectEmoji = emojiJSON[emojiIndex].emoji;
   const selectFont = fontJSON[fontIndex].fontFamily;
-  // const selectFont = getRandomFont();
+  const selectSize = fontJSON[fontIndex].fontSize;
   const selectText = phraseJSON[phraseIndex].text;
   const selectAuthor = phraseJSON[phraseIndex].source;
   const selectColor = colorJSON[colorIndex].color;
+
+  const saveIcon = "../img/icon/bookmark_white.svg";
 
   card.style.backgroundColor = `${selectColor}`;
   cardEmoji.setAttribute("src", `${selectEmoji}`);
 
   cardText.style.fontFamily = `${selectFont}`;
+  cardText.style.fontSize = `${selectSize}`;
   cardText.innerText = selectText;
 
   cardAuthor.style.fontFamily = `${selectFont}`;
+  // cardAuthor.style.fontSize = `${fontJSON[fontIndex].fontSize}`;
   cardAuthor.innerText = selectAuthor;
 
-  saveNewCard(selectEmoji, selectText, selectAuthor, selectFont, selectColor);
+  saveNewCard(
+    selectEmoji,
+    selectText,
+    selectAuthor,
+    selectFont,
+    selectSize,
+    selectColor,
+    saveIcon
+  );
 }
 
 export function createTextCard() {
@@ -50,29 +62,34 @@ export function createTextCard() {
   const cardEmoji = document.createElement("img");
   const cardText = document.createElement("p");
   const cardAuthor = document.createElement("p");
-  const saveBtn = document.createElement("button");
+  // const saveBtn = document.createElement("button");
+  const saveIcon = document.createElement("img");
 
   card.setAttribute("id", "today-card");
   cardEmoji.setAttribute("id", "emoji");
   cardText.setAttribute("id", "text");
   cardAuthor.setAttribute("id", "author");
-  saveBtn.setAttribute("id", "save-btn");
+  // saveBtn.setAttribute("id", "save-btn");
+  saveIcon.setAttribute("id", "save-btn");
+  saveIcon.setAttribute("src", "../img/icon/bookmark_white.svg");
 
   todayCards.append(card);
-  card.append(cardEmoji, cardText, cardAuthor, saveBtn);
+  card.append(cardEmoji, cardText, cardAuthor, saveIcon);
 
   getRandom(card);
-  saveBtn.innerText = "저장하기";
+  // saveBtn.innerText = "저장하기";
 }
 
-function saveNewCard(emoji, text, author, font, color) {
+function saveNewCard(emoji, text, author, font, size, color, saveIcon) {
   let isDone = false;
   const card = {
     emoji: emoji,
     text: text,
     author: author,
     font: font,
+    size: size,
     color: color,
+    saveIcon: saveIcon,
   };
 
   //   if (localStorage.getItem("todayCard") == null) {

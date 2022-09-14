@@ -1,32 +1,47 @@
 form #today-cards {
-  margin-top: 46.5px;
-  border-top: 2px solid black;
-}
-form #today-cards h1 {
-  text-align: center;
+  margin-top: 65px;
 }
 form #today-cards #today-card {
+  position: relative;
   margin: 15px;
   padding: 15px;
+  border-radius: 30px;
   background-color: rgb(112, 162, 36);
+  text-align: center;
 }
 form #today-cards #today-card #emoji {
-  width: 70px;
+  width: 122px;
   margin: 0;
 }
 form #today-cards #today-card #text {
-  font-size: 22px;
+  font-size: 24px;
+  color: white;
 }
 form #today-cards #today-card #author {
-  display: flex;
-  justify-content: flex-end;
-}
-form #today-cards #today-card #delete-btn {
-  display: flex;
-  border: none;
-  background-color: transparent;
+  font-size: 14px;
   color: white;
+}
+form #today-cards #today-card #mark-icon {
+  position: absolute;
+  left: 88%;
+  right: 11.79%;
+  top: 8.64%;
+  bottom: 89.43%;
   cursor: pointer;
+}
+form #today-cards #no-saving {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+form #today-cards #no-saving img {
+  width: 122px;
+}
+form #today-cards #no-saving p {
+  font-size: 24px;
+  color: #555555;
+  font-family: "HSSaemaul-Regular";
 }
 
 /*# sourceMappingURL=sideSaveStyle.css.map */

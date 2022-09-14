@@ -11,10 +11,10 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "BareunBatang";
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: url("//cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunBatang/BareunBatangOTFM.woff2") format("woff2"), url("//cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunBatang/BareunBatangOTFM.woff") format("woff");
 }
 @font-face {
   font-family: "KOTRALEAP";
@@ -49,6 +49,12 @@
 @font-face {
   font-family: "SBAggroB";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HSSaemaul-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

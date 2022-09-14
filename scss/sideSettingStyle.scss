@@ -1,73 +1,133 @@
 form {
   #settings {
     margin-top: 46.5px;
-    border-top: 2px solid black;
-    .setting-div {
-      margin: 20px 10px 10px 10px;
-      .setting-title {
-        font-size: 15px;
-      }
+    padding: 5px 10px;
+    #setting-title {
+      font-size: 18px;
+    }
+    #des {
+      margin: 20px 0 50px 0;
+      font-size: 14px;
+      text-align: center;
     }
     #filters {
-      .filter {
-        text-align: center;
-        margin-bottom: 30px;
-        .selected {
-          background-color: black;
-          color: white;
-        }
-        button {
-          width: 95vw;
-          background-color: transparent;
-          padding: 10px 0;
-          margin-bottom: 15px;
-          border: 2px solid black;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        span {
-          display: block;
-          color: rgb(125, 125, 125);
-        }
-      }
-      span {
-        font-size: 15px;
-      }
-    }
-    #bg-custom {
-      #bg-color {
+      #filter-div {
         display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        input {
-          border: 1px solid black;
-          margin-right: 15px;
-          background-color: transparent;
-          width: 80px;
-          height: 80px;
-          cursor: pointer;
-        }
-      }
-      #bg-img {
-        margin-bottom: 15px;
-      }
-      span {
-        font-size: 15px;
-      }
-    }
-    #send-msg {
-      #link {
-        display: flex;
-        // flex-direction: column;
-        align-items: center;
-        a {
-          margin-right: 15px;
-          img {
-            width: 40px;
+        justify-content: center;
+        #selected {
+          border: 2px solid #f27751;
+          button {
+            color: #f27751;
           }
         }
-        span {
-          font-size: 15px;
+        .filter-btn {
+          height: 150px;
+          width: 33%;
+          margin: 0 10px;
+          border: 2px solid #d0d0d0;
+          border-radius: 15px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 70px;
+            cursor: pointer;
+          }
+          button {
+            font-size: 16px;
+            border: none;
+            background-color: transparent;
+            color: #d0d0d0;
+          }
+        }
+      }
+    }
+    #bg {
+      #bg-div {
+        display: flex;
+        justify-content: center;
+        #bg-color {
+          label {
+            position: relative;
+            img {
+              position: absolute;
+              width: 34px;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+        .bg-box {
+          width: 300px;
+          height: 150px;
+          margin: 0 10px;
+          border: 2px solid #d0d0d0;
+          border-radius: 15px;
+          color: #d0d0d0;
+          div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            label {
+              cursor: pointer;
+              img {
+                width: 29px;
+              }
+            }
+            img {
+              width: 29px;
+              cursor: pointer;
+            }
+            p {
+              text-align: center;
+              margin-bottom: 0;
+              font-size: 12px;
+            }
+          }
+          input {
+            display: none;
+          }
+        }
+        .selected {
+          border: 2px solid #f27751;
+          color: #f27751;
+          #bg-img-svg {
+            svg {
+              path {
+                stroke: #f27751;
+                &:nth-child(2) {
+                  fill: #f27751;
+                }
+                &:nth-child(3) {
+                  fill: #f27751;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #content-msg {
+      #content-div {
+        height: 150px;
+        background-color: #383838;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 10px;
+        img {
+          width: 85px;
+        }
+        a {
+          font-size: 20px;
+          text-decoration: none;
+          color: white;
         }
       }
     }

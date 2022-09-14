@@ -1,28 +1,35 @@
 form #today-cards {
-  margin-top: 46.5px;
-  border-top: 2px solid black;
+  margin-top: 65px;
+}
+form #today-cards #today-card {
+  margin-bottom: 30px;
 }
 form #today-cards #today-card #data {
   margin: 15px;
   padding: 15px;
-  background-color: coral;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
 }
 form #today-cards #today-card #data #emoji {
-  width: 70px;
+  width: 122px;
   margin: 0;
 }
 form #today-cards #today-card #data #text {
-  font-size: 22px;
+  font-size: 24px;
 }
 form #today-cards #today-card #data #author {
-  display: flex;
-  justify-content: flex-end;
+  font-size: 14px;
 }
-form #today-cards #today-card #btns #save-btn,
-form #today-cards #today-card #btns #cap-btn {
-  margin: 5px 15px;
-  border: none;
-  background-color: transparent;
+form #today-cards #today-card #btns {
+  display: flex;
+  justify-content: center;
+}
+form #today-cards #today-card #btns img {
+  padding: 12px 46px;
+  margin: 0 7.5px;
+  border: 2px solid #f27751;
+  border-radius: 30px;
   cursor: pointer;
 }
 

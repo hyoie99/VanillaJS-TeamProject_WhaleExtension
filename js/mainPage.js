@@ -19,30 +19,37 @@ if (whatToday == null) {
   localStorage.removeItem("today2");
 }
 
-if (
-  (localStorage.getItem("bgColor") == null) &
-  (localStorage.getItem("bgImg") == null)
-) {
-  localStorage.setItem("bgColor", "#ffffff");
-}
-
 const clearBtn = document.querySelector("#clear-btn");
 const body = document.querySelector("body");
 const searchBar = document.querySelector("#search");
 
-const bgColor = localStorage.getItem("bgColor");
-if (bgColor !== null) {
-  body.style.backgroundColor = bgColor;
+// const bgColor = localStorage.getItem("bgColor");
+const whichBG = localStorage.getItem("whichBG");
+if (whichBG == null) {
+  localStorage.setItem("whichBG", "color");
+  localStorage.setItem("bgColor", "#181818");
+  body.style.backgroundColor = "#181818";
+}
+// if (
+//   (localStorage.getItem("bgColor") == null) &
+//   (localStorage.getItem("bgImg") == null)
+// ) {
+//   localStorage.setItem("bgColor", "#181818");
+// }
+
+if (whichBG == "color") {
+  body.style.backgroundColor = localStorage.getItem("bgColor");
 } else {
   const imgUrl = localStorage.getItem("bgImg");
   body.style.backgroundImage = `url("${imgUrl}")`;
   body.style.backgroundRepeat = "no repeat";
   body.style.backgroundSize = "cover";
 }
-if (bgColor == "#ffffff") {
-  searchBar.style.border = "1px solid black";
-} else {
-  searchBar.style.border = "1px solid white";
+
+if (localStorage.getItem("bgColor") == "#ffffff") {
+  searchBar.querySelector("svg path").setAttribute("fill", "green");
+  searchBar.style.border = "2px solid black";
+  searchBar.querySelector("input").style.color = "black";
 }
 
 // const today = new Date().getDate();
@@ -100,9 +107,9 @@ closeBtn.addEventListener("click", function () {
   todayCards.style.opacity = "1";
   popCard.style.display = "none";
 });
-clearBtn.addEventListener("click", function () {
-  localStorage.removeItem("today0");
-  localStorage.removeItem("today1");
-  localStorage.removeItem("today2");
-  localStorage.removeItem("extraContent");
-});
+// clearBtn.addEventListener("click", function () {
+//   localStorage.removeItem("today0");
+//   localStorage.removeItem("today1");
+//   localStorage.removeItem("today2");
+//   localStorage.removeItem("extraContent");
+// });

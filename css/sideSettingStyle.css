@@ -1,68 +1,121 @@
 form #settings {
   margin-top: 46.5px;
-  border-top: 2px solid black;
+  padding: 5px 10px;
 }
-form #settings .setting-div {
-  margin: 20px 10px 10px 10px;
+form #settings #setting-title {
+  font-size: 18px;
 }
-form #settings .setting-div .setting-title {
-  font-size: 15px;
-}
-form #settings #filters .filter {
+form #settings #des {
+  margin: 20px 0 50px 0;
+  font-size: 14px;
   text-align: center;
-  margin-bottom: 30px;
 }
-form #settings #filters .filter .selected {
-  background-color: black;
+form #settings #filters #filter-div {
+  display: flex;
+  justify-content: center;
+}
+form #settings #filters #filter-div #selected {
+  border: 2px solid #f27751;
+}
+form #settings #filters #filter-div #selected button {
+  color: #f27751;
+}
+form #settings #filters #filter-div .filter-btn {
+  height: 150px;
+  width: 33%;
+  margin: 0 10px;
+  border: 2px solid #d0d0d0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form #settings #filters #filter-div .filter-btn img {
+  width: 70px;
+  cursor: pointer;
+}
+form #settings #filters #filter-div .filter-btn button {
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  color: #d0d0d0;
+}
+form #settings #bg #bg-div {
+  display: flex;
+  justify-content: center;
+}
+form #settings #bg #bg-div #bg-color label {
+  position: relative;
+}
+form #settings #bg #bg-div #bg-color label img {
+  position: absolute;
+  width: 34px;
+  top: 0;
+  left: 0;
+}
+form #settings #bg #bg-div .bg-box {
+  width: 300px;
+  height: 150px;
+  margin: 0 10px;
+  border: 2px solid #d0d0d0;
+  border-radius: 15px;
+  color: #d0d0d0;
+}
+form #settings #bg #bg-div .bg-box div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form #settings #bg #bg-div .bg-box div label {
+  cursor: pointer;
+}
+form #settings #bg #bg-div .bg-box div label img {
+  width: 29px;
+}
+form #settings #bg #bg-div .bg-box div img {
+  width: 29px;
+  cursor: pointer;
+}
+form #settings #bg #bg-div .bg-box div p {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+form #settings #bg #bg-div .bg-box input {
+  display: none;
+}
+form #settings #bg #bg-div .selected {
+  border: 2px solid #f27751;
+  color: #f27751;
+}
+form #settings #bg #bg-div .selected #bg-img-svg svg path {
+  stroke: #f27751;
+}
+form #settings #bg #bg-div .selected #bg-img-svg svg path:nth-child(2) {
+  fill: #f27751;
+}
+form #settings #bg #bg-div .selected #bg-img-svg svg path:nth-child(3) {
+  fill: #f27751;
+}
+form #settings #content-msg #content-div {
+  height: 150px;
+  background-color: #383838;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10px;
+}
+form #settings #content-msg #content-div img {
+  width: 85px;
+}
+form #settings #content-msg #content-div a {
+  font-size: 20px;
+  text-decoration: none;
   color: white;
-}
-form #settings #filters .filter button {
-  width: 95vw;
-  background-color: transparent;
-  padding: 10px 0;
-  margin-bottom: 15px;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-}
-form #settings #filters .filter span {
-  display: block;
-  color: rgb(125, 125, 125);
-}
-form #settings #filters span {
-  font-size: 15px;
-}
-form #settings #bg-custom #bg-color {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-form #settings #bg-custom #bg-color input {
-  border: 1px solid black;
-  margin-right: 15px;
-  background-color: transparent;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-}
-form #settings #bg-custom #bg-img {
-  margin-bottom: 15px;
-}
-form #settings #bg-custom span {
-  font-size: 15px;
-}
-form #settings #send-msg #link {
-  display: flex;
-  align-items: center;
-}
-form #settings #send-msg #link a {
-  margin-right: 15px;
-}
-form #settings #send-msg #link a img {
-  width: 40px;
-}
-form #settings #send-msg #link span {
-  font-size: 15px;
 }
 
 /*# sourceMappingURL=sideSettingStyle.css.map */

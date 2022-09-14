@@ -1,40 +1,40 @@
-const btns = document.querySelectorAll("#filter-btn");
+const btns = document.querySelectorAll(".filter-btn");
 
 function selectBtn(event) {
-  const selectedBtn = event.target;
+  const targetBtn = event.path[1];
 
   localStorage.removeItem("today0");
   localStorage.removeItem("today1");
   localStorage.removeItem("today2");
 
   btns.forEach((btn) => {
-    btn.classList.remove("selected");
+    btn.id = "";
   });
-  selectedBtn.classList.add("selected");
-  saveFilter(selectedBtn);
+  targetBtn.id = "selected";
+  saveFilter(targetBtn);
 }
 
-function saveFilter(element) {
-  const filterClass = element.parentNode.classList[1];
-  localStorage.setItem("filter", filterClass);
+function saveFilter(btn) {
+  const filter = btn.querySelector("button").classList[0];
+  localStorage.setItem("filter", filter);
 }
 
 function getFilter() {
   const savedFilter = localStorage.getItem("filter");
   btns.forEach((btn) => {
-    btn.classList.remove("selected");
-    if (btn.parentNode.classList[1] == savedFilter) {
-      btn.classList.add("selected");
+    btn.id = "";
+    if (btn.querySelector("button").classList[0] == savedFilter) {
+      btn.id = "selected";
     }
   });
 }
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", selectBtn);
+});
 
 getFilter();
 whale.sidebarAction.onClicked.addListener(function (result) {
   window.location.reload();
   getFilter();
-});
-
-btns.forEach((btn) => {
-  btn.addEventListener("click", selectBtn);
 });
