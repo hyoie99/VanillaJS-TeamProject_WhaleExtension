@@ -1,5 +1,6 @@
 const bgColorBtn = document.querySelector("#bg-custom input");
 const bgImgInput = document.querySelector("#bg-img input");
+const bgClearBtn = document.querySelector("#clear-btn");
 
 function changeColor(event) {
   localStorage.removeItem("bgImage");
@@ -20,3 +21,7 @@ function changeImg(event) {
 bgColorBtn.value = localStorage.getItem("bgColor");
 bgColorBtn.addEventListener("change", changeColor);
 bgImgInput.addEventListener("change", changeImg);
+bgClearBtn.addEventListener("click", function () {
+  localStorage.removeItem("bgColor");
+  localStorage.removeItem("bgImg");
+});

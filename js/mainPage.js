@@ -6,8 +6,10 @@ import { textPopup } from "./textPopup.js";
 import { saveTodayCard } from "./saveCard.js";
 
 const today = new Date().getDate();
+// console.log(today);
 // const today = 15;
 const whatToday = localStorage.getItem("Date");
+// console.log(whatToday);
 if (whatToday == null) {
   localStorage.setItem("Date", today);
 } else if (today != whatToday) {

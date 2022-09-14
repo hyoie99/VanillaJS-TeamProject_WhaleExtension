@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll("button");
+const btns = document.querySelectorAll("#filter-btn");
 
 function selectBtn(event) {
   const selectedBtn = event.target;

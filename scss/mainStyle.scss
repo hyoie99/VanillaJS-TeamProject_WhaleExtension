@@ -48,7 +48,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // text-align: center;
+        text-align: center;
         #emoji {
           align-self: center;
           width: 70px;
@@ -62,11 +62,12 @@ body {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
+          word-break: keep-all;
           cursor: pointer;
         }
         #author {
-          display: flex;
-          justify-content: flex-end;
+          // display: flex;
+          // justify-content: flex-end;
         }
         #save-btn {
           display: flex;
@@ -94,6 +95,7 @@ body {
       p {
         font-size: 22px;
         text-align: center;
+        word-break: keep-all;
       }
       button {
         border: none;
