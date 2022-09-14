@@ -1,10 +1,12 @@
 import { filteringPhrase } from "./filterJSON.js";
 import { filteringEmoji } from "./filterJSON.js";
 import { filteringFont } from "./filterJSON.js";
+import { filteringColor } from "./filterJSON.js";
 
 const phraseURL = await filteringPhrase();
 const emojiURL = await filteringEmoji();
 const fontURL = await filteringFont();
+const colorURL = await filteringColor();
 
 const todayCards = document.querySelector("#today-cards");
 let id = 0;
@@ -13,10 +15,12 @@ function getRandom(card) {
   const phraseJSON = phraseURL;
   const emojiJSON = emojiURL;
   const fontJSON = fontURL;
+  const colorJSON = colorURL;
 
   const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
   const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
   const fontIndex = Math.floor(Math.random() * fontJSON.length);
+  const colorIndex = Math.floor(Math.random() * colorJSON.length);
 
   const cardEmoji = card.querySelector("#emoji");
   const cardText = card.querySelector("#text");
@@ -24,9 +28,12 @@ function getRandom(card) {
 
   const selectEmoji = emojiJSON[emojiIndex].emoji;
   const selectFont = fontJSON[fontIndex].fontFamily;
+  // const selectFont = getRandomFont();
   const selectText = phraseJSON[phraseIndex].text;
   const selectAuthor = phraseJSON[phraseIndex].source;
+  const selectColor = colorJSON[colorIndex].color;
 
+  card.style.backgroundColor = `${selectColor}`;
   cardEmoji.setAttribute("src", `${selectEmoji}`);
 
   cardText.style.fontFamily = `${selectFont}`;
@@ -35,7 +42,7 @@ function getRandom(card) {
   cardAuthor.style.fontFamily = `${selectFont}`;
   cardAuthor.innerText = selectAuthor;
 
-  saveNewCard(selectEmoji, selectText, selectAuthor, selectFont);
+  saveNewCard(selectEmoji, selectText, selectAuthor, selectFont, selectColor);
 }
 
 export function createTextCard() {
@@ -58,13 +65,14 @@ export function createTextCard() {
   saveBtn.innerText = "저장하기";
 }
 
-function saveNewCard(emoji, text, author, font) {
+function saveNewCard(emoji, text, author, font, color) {
   let isDone = false;
   const card = {
     emoji: emoji,
     text: text,
     author: author,
     font: font,
+    color: color,
   };
 
   //   if (localStorage.getItem("todayCard") == null) {

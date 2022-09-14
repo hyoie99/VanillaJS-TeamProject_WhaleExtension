@@ -1,7 +1,7 @@
 const todayCards = document.querySelector("#today-cards");
 
-export function getTextCard(cardArray) {
-  const getCard = JSON.parse(localStorage.getItem(cardArray));
+export function getTextCard(cardNum) {
+  const getCard = JSON.parse(localStorage.getItem(cardNum));
 
   const card = document.createElement("div");
   const cardEmoji = document.createElement("img");
@@ -15,6 +15,7 @@ export function getTextCard(cardArray) {
   cardAuthor.setAttribute("id", "author");
   saveBtn.setAttribute("id", "save-btn");
 
+  card.style.backgroundColor = `${getCard.color}`;
   cardEmoji.setAttribute("src", `${getCard.emoji}`);
 
   cardText.style.fontFamily = `${getCard.font}`;

@@ -23,7 +23,7 @@ export function addContent() {
   const extra = document.createElement("div");
   const title = document.createElement("a");
 
-  extra.setAttribute("id", "today-card");
+  extra.setAttribute("id", "content-card");
   title.setAttribute("id", "title");
 
   extra.append(title);

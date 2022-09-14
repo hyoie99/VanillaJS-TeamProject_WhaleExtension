@@ -39,7 +39,6 @@ body #main #today-cards #today-card {
   margin: 0 25px;
   padding: 20px 20px 10px 20px;
   border-radius: 10%;
-  background-color: rgb(235, 123, 255);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -67,6 +66,22 @@ body #main #today-cards #today-card #save-btn {
   background-color: transparent;
   color: white;
   cursor: pointer;
+}
+body #main #today-cards #content-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  margin: 0 25px;
+  padding: 20px 20px 10px 20px;
+  border-radius: 10%;
+}
+body #main #today-cards #content-card a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
 }
 body #main #clear-btn {
   font-size: 20px;

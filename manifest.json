@@ -16,5 +16,6 @@
   "chrome_url_overrides": {
     "newtab": "html/main.html"
   },
-  "permissions": ["tabs", "pageCapture"]
+  "permissions": ["tabs", "pageCapture"],
+  "web_accessible_resources": ["json/*.json", "css/*.css"]
 }

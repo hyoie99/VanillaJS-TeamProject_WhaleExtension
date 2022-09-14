@@ -6,7 +6,7 @@ export function getExtraCard() {
   const extra = document.createElement("div");
   const title = document.createElement("a");
 
-  extra.setAttribute("id", "today-card");
+  extra.setAttribute("id", "content-card");
   title.setAttribute("id", "title");
   title.setAttribute("href", `${getExtra.link}`);
   title.setAttribute("target", "_blank");

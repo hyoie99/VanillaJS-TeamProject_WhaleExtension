@@ -7,6 +7,7 @@ const phraseURL = "../json/text.json";
 const emojiURL = "../json/emoji.json";
 const fontURL = "../json/font.json";
 const contentURL = "../json/content.json";
+const colorURL = "../json/color.json";
 
 export const filteringPhrase = async () => {
   const phraseJson = await (await fetch(phraseURL)).json();
@@ -58,4 +59,17 @@ export const filteringContent = async () => {
   });
 
   return newContentJson;
+};
+
+export const filteringColor = async () => {
+  const colorJson = await (await fetch(colorURL)).json();
+
+  let newColorJson = [];
+  colorJson.forEach((element) => {
+    if (element.filter == savedfilter) {
+      newColorJson.push(element);
+    }
+  });
+
+  return newColorJson;
 };
