@@ -45,6 +45,7 @@ function changeColor(event) {
   localStorage.setItem("bgColor", selectColor);
 
   localStorage.setItem("whichBG", "color");
+  alert("변경되었습니다.");
 }
 
 function changeImg(event) {
@@ -58,14 +59,15 @@ function changeImg(event) {
   localStorage.setItem("whichBG", "image");
 
   bgColorDiv.classList = "bg-box";
+  alert("변경되었습니다.");
 }
 
 bgColorBtn.value = localStorage.getItem("bgColor");
 bgColorBtn.addEventListener("change", changeColor);
 bgImgInput.addEventListener("change", changeImg);
 bgClearBtn.addEventListener("click", function () {
-  console.log("click");
   localStorage.setItem("bgColor", "#181818");
   localStorage.removeItem("bgImg");
   localStorage.removeItem("whichBG");
+  alert("변경되었습니다.");
 });

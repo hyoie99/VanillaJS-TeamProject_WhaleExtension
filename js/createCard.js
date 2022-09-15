@@ -9,7 +9,13 @@ const fontURL = await filteringFont();
 const colorURL = await filteringColor();
 
 const todayCards = document.querySelector("#today-cards");
-let id = 0;
+
+function checkRedulp(element) {
+  const todayArray = localStorage.getItem("todayCard");
+  console.log(todayArray);
+}
+
+checkRedulp();
 
 function getRandom(card) {
   const phraseJSON = phraseURL;
