@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 form #link-btns {
   z-index: 1;
   width: 100vw;
@@ -10,10 +11,11 @@ form #link-btns {
   border-bottom: 6px solid #f0f0f0;
   font-size: 14px;
   font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
 }
 form #link-btns .current-page {
   border-bottom: 3px solid #f27751;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
   color: #f27751;
 }
 form #link-btns div {

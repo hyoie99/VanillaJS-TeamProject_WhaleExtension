@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
 form {
   #settings {
     margin-top: 50px;
@@ -6,6 +8,7 @@ form {
       font-size: 18px;
       margin-left: 10px;
       color: #f27751;
+      font-family: "Noto Sans KR", sans-serif;
     }
     #des {
       margin: 20px 0 50px 0;
