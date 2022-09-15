@@ -32,6 +32,7 @@ export function getTextCard(cardArray) {
   downloadIcon.setAttribute("src", "../img/icon/download.svg");
 
   cardText.style.fontFamily = `${getCard.font}`;
+  cardText.style.fontSize = `${getCard.size}`;
   cardText.innerText = getCard.text;
 
   cardAuthor.style.fontFamily = `${getCard.font}`;
