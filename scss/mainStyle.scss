@@ -51,8 +51,10 @@ body {
       display: flex;
       // margin-bottom: 50px;
       width: 100%;
+      // width: 100vw;
+      // overflow: visible;
       text-align: center;
-      justify-content: center;
+      // justify-content: center;
       #today-card {
         position: relative;
         // width: 270px;
@@ -103,6 +105,9 @@ body {
         justify-content: center;
         // width: 270px;
         // height: 330px;
+        // width: 389px;
+        // height: 445px;
+
         width: 350px;
         height: 400px;
         margin: 0 15px;
@@ -117,7 +122,7 @@ body {
         }
         a {
           img {
-            width: 170px;
+            width: 230px;
             margin: 10px 0;
           }
         }
