@@ -3,10 +3,13 @@ form {
     // margin-top: 46.5px;
     margin-top: 65px;
     // border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     #today-card {
       position: relative;
-
-      margin: 15px;
+      width: 300px;
+      margin: 21px 0;
       padding: 15px;
       border-radius: 30px;
       // background-color: rgb(112, 162, 36);
@@ -19,6 +22,7 @@ form {
       #text {
         font-size: 24px;
         color: white;
+        word-break: keep-all;
       }
       #author {
         font-size: 14px;

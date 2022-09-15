@@ -77,9 +77,9 @@ body #main #today-cards #today-card #author {
 }
 body #main #today-cards #today-card #save-btn {
   position: absolute;
-  left: 84%;
+  left: 86%;
   right: 71.88%;
-  top: 7%;
+  top: 5%;
   bottom: 62.13%;
   cursor: pointer;
 }

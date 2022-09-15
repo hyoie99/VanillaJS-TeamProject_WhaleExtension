@@ -1,9 +1,13 @@
 form #today-cards {
   margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 form #today-cards #today-card {
   position: relative;
-  margin: 15px;
+  width: 300px;
+  margin: 21px 0;
   padding: 15px;
   border-radius: 30px;
   text-align: center;
@@ -15,6 +19,7 @@ form #today-cards #today-card #emoji {
 form #today-cards #today-card #text {
   font-size: 24px;
   color: white;
+  word-break: keep-all;
 }
 form #today-cards #today-card #author {
   font-size: 14px;
