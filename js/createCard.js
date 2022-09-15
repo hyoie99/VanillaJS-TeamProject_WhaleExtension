@@ -10,14 +10,23 @@ const colorURL = await filteringColor();
 
 const todayCards = document.querySelector("#today-cards");
 
-function checkRedulp(element) {
-  const todayArray = localStorage.getItem("todayCard");
-  console.log(todayArray);
+function checkRedulp(selected, element) {
+  if (localStorage.getItem("todayCard") !== null) {
+    const todayArray = JSON.parse(localStorage.getItem("todayCard"));
+    todayArray.forEach((today) => {
+      if (selected == today[element]) {
+        console.log("중복");
+      } else {
+        console.log("No 중복");
+        return selected;
+      }
+    });
+  }
 }
 
-checkRedulp();
-
 function getRandom(card) {
+  let isOKAY = false;
+
   const phraseJSON = phraseURL;
   const emojiJSON = emojiURL;
   const fontJSON = fontURL;
@@ -28,16 +37,18 @@ function getRandom(card) {
   const fontIndex = Math.floor(Math.random() * fontJSON.length);
   const colorIndex = Math.floor(Math.random() * colorJSON.length);
 
-  const cardEmoji = card.querySelector("#emoji");
-  const cardText = card.querySelector("#text");
-  const cardAuthor = card.querySelector("#author");
-
   const selectEmoji = emojiJSON[emojiIndex].emoji;
   const selectFont = fontJSON[fontIndex].fontFamily;
   const selectSize = fontJSON[fontIndex].fontSize;
   const selectText = phraseJSON[phraseIndex].text;
   const selectAuthor = phraseJSON[phraseIndex].source;
   const selectColor = colorJSON[colorIndex].color;
+
+  console.log(checkRedulp(selectText, "text"));
+
+  const cardEmoji = card.querySelector("#emoji");
+  const cardText = card.querySelector("#text");
+  const cardAuthor = card.querySelector("#author");
 
   const saveIcon = "../img/icon/bookmark_white.svg";
 

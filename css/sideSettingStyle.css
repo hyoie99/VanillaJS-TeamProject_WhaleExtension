@@ -11,6 +11,9 @@ form #settings #des {
   font-size: 14px;
   text-align: center;
 }
+form #settings #filters {
+  padding-top: 22px;
+}
 form #settings #filters #filter-div {
   display: flex;
   justify-content: center;

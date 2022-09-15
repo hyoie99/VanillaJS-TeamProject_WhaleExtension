@@ -113,7 +113,7 @@ if (cardArray == null) {
   getExtraCard();
 }
 
-console.log(JSON.parse(cardArray));
+// console.log(JSON.parse(cardArray));
 
 const main = document.querySelector("#main");
 const form = document.querySelector("form");
