@@ -1,9 +1,10 @@
 form #settings {
-  margin-top: 46.5px;
-  padding: 5px 10px;
+  margin-top: 50px;
+  padding: 5px 5px;
 }
 form #settings #setting-title {
   font-size: 18px;
+  margin-left: 10px;
 }
 form #settings #des {
   margin: 20px 0 50px 0;
@@ -30,10 +31,17 @@ form #settings #filters #filter-div .filter-btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: inherit;
 }
 form #settings #filters #filter-div .filter-btn img {
   width: 70px;
   cursor: pointer;
+}
+form #settings #filters #filter-div .filter-btn .hidden {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 form #settings #filters #filter-div .filter-btn button {
   font-size: 16px;

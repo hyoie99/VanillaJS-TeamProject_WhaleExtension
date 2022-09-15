@@ -1,9 +1,10 @@
 form {
   #settings {
-    margin-top: 46.5px;
-    padding: 5px 10px;
+    margin-top: 50px;
+    padding: 5px 5px;
     #setting-title {
       font-size: 18px;
+      margin-left: 10px;
     }
     #des {
       margin: 20px 0 50px 0;
@@ -32,9 +33,16 @@ form {
           justify-content: center;
           align-items: center;
 
+          position: inherit;
           img {
             width: 70px;
             cursor: pointer;
+          }
+          .hidden {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
           }
           button {
             font-size: 16px;

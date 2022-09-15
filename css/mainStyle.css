@@ -35,14 +35,15 @@ body #main #search input {
 }
 body #main #today-cards {
   display: flex;
+  width: 100%;
   text-align: center;
 }
 body #main #today-cards #today-card {
   position: relative;
-  width: 270px;
-  height: 330px;
+  width: 350px;
+  height: 400px;
   margin: 0 25px;
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -51,7 +52,7 @@ body #main #today-cards #today-card {
 }
 body #main #today-cards #today-card #emoji {
   align-self: center;
-  width: 70px;
+  width: 122px;
   margin: 0;
 }
 body #main #today-cards #today-card #text {
@@ -82,10 +83,10 @@ body #main #today-cards #content-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 270px;
-  height: 330px;
+  width: 350px;
+  height: 400px;
   margin: 0 25px;
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
   border-radius: 30px;
   font-family: "HSSaemaul-Regular";
   color: white;
@@ -95,11 +96,13 @@ body #main #today-cards #content-card #title {
   margin: 0px;
 }
 body #main #today-cards #content-card a img {
-  width: 199px;
+  width: 170px;
+  margin: 10px 0;
 }
 body #main #today-cards #content-card #description {
   font-size: 24px;
   margin: 0px;
+  word-break: keep-all;
 }
 body #main #clear-btn {
   font-size: 20px;
