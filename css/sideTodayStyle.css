@@ -6,7 +6,7 @@ form #today-cards {
 }
 form #today-cards #today-card {
   margin-bottom: 15px;
-  width: 450px;
+  width: 350px;
 }
 form #today-cards #today-card #data {
   margin: 0 15px;
