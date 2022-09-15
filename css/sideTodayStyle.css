@@ -5,11 +5,11 @@ form #today-cards {
   align-items: center;
 }
 form #today-cards #today-card {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   width: 450px;
 }
 form #today-cards #today-card #data {
-  margin: 15px;
+  margin: 0 15px;
   padding: 15px;
   border-radius: 30px;
   color: white;
@@ -32,7 +32,7 @@ form #today-cards #today-card #btns {
 }
 form #today-cards #today-card #btns img {
   padding: 12px 46px;
-  margin: 0 7.5px;
+  margin: 10px 7.5px;
   border: 2px solid #f27751;
   border-radius: 30px;
   cursor: pointer;
