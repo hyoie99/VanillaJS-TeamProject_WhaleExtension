@@ -59,9 +59,11 @@ body {
         position: relative;
         // width: 270px;
         // height: 330px;
-        width: 350px;
-        height: 400px;
-        margin: 0 15px;
+        // width: 350px;
+        // height: 400px;
+        width: 320px;
+        height: 403px;
+        margin: 0 11px;
         padding: 20px;
         border-radius: 30px;
         // background-color: rgb(235, 123, 255);
@@ -100,16 +102,15 @@ body {
         }
       }
       #content-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
         // width: 270px;
         // height: 330px;
         // width: 389px;
         // height: 445px;
-
-        width: 350px;
-        height: 400px;
+        width: 320px;
+        height: 403px;
         margin: 0 15px;
         padding: 20px;
         // padding: 25px 75px 40px 75px;
@@ -117,18 +118,21 @@ body {
         font-family: "HSSaemaul-Regular";
         color: white;
         #title {
-          font-size: 32px;
-          margin: 0px;
+          font-size: 36px;
+          margin: 38px 80px 18px 80px;
         }
         a {
           img {
-            width: 230px;
-            margin: 10px 0;
+            // width: 230px;
+            width: 190.83px;
+            height: 190px;
+            margin: 0 64px 0 64px;
           }
         }
         #description {
           font-size: 24px;
-          margin: 0px;
+          // margin: 0px;
+          margin: 15px 50px 50px 50px;
           word-break: keep-all;
         }
       }
