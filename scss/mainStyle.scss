@@ -57,16 +57,12 @@ body {
       justify-content: center;
       #today-card {
         position: relative;
-        // width: 270px;
-        // height: 330px;
-        // width: 350px;
-        // height: 400px;
         width: 320px;
         height: 403px;
         margin: 0 11px;
         padding: 20px;
+
         border-radius: 30px;
-        // background-color: rgb(235, 123, 255);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -102,16 +98,16 @@ body {
         }
       }
       #content-card {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         // width: 270px;
         // height: 330px;
         // width: 389px;
         // height: 445px;
         width: 320px;
         height: 403px;
-        margin: 0 15px;
+        margin: 0 11px;
         padding: 20px;
         // padding: 25px 75px 40px 75px;
         border-radius: 30px;
@@ -119,14 +115,16 @@ body {
         color: white;
         #title {
           font-size: 36px;
-          margin: 38px 80px 18px 80px;
+          // margin: 38px 80px 18px 80px;
+          margin-top: 40px;
+          margin-bottom: 15px;
         }
         a {
           img {
             // width: 230px;
             width: 190.83px;
             height: 190px;
-            margin: 0 64px 0 64px;
+            // margin: 0 48px 0 48px;
           }
         }
         #description {

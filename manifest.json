@@ -3,7 +3,7 @@
   "name": "글마카세",
   "version": "1.0.0",
 
-  "description": "확장앱 설명",
+  "description": "매일 내게 맞는 글을 맛볼 수 있는 글마카세",
   "icons": {
     "128": "img/icon/logo.png"
   },

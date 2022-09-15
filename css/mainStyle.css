@@ -84,9 +84,12 @@ body #main #today-cards #today-card #save-btn {
   cursor: pointer;
 }
 body #main #today-cards #content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 320px;
   height: 403px;
-  margin: 0 15px;
+  margin: 0 11px;
   padding: 20px;
   border-radius: 30px;
   font-family: "HSSaemaul-Regular";
@@ -94,12 +97,12 @@ body #main #today-cards #content-card {
 }
 body #main #today-cards #content-card #title {
   font-size: 36px;
-  margin: 38px 80px 18px 80px;
+  margin-top: 40px;
+  margin-bottom: 15px;
 }
 body #main #today-cards #content-card a img {
   width: 190.83px;
   height: 190px;
-  margin: 0 64px 0 64px;
 }
 body #main #today-cards #content-card #description {
   font-size: 24px;
