@@ -17,6 +17,7 @@ if (whatToday == null) {
   localStorage.removeItem("today0");
   localStorage.removeItem("today1");
   localStorage.removeItem("today2");
+  localStorage.removeItem("extraContent");
 }
 
 const clearBtn = document.querySelector("#clear-btn");
@@ -47,9 +48,12 @@ if (whichBG == "color") {
 }
 
 if (localStorage.getItem("bgColor") == "#ffffff") {
-  searchBar.querySelector("svg path").setAttribute("fill", "green");
+  searchBar.querySelector("svg path").setAttribute("fill", "black");
   searchBar.style.border = "2px solid black";
   searchBar.querySelector("input").style.color = "black";
+} else {
+  // searchBar.querySelector("svg path").setAttribute("fill", "green");
+  searchBar.style.border = "2px solid white";
 }
 
 // const today = new Date().getDate();

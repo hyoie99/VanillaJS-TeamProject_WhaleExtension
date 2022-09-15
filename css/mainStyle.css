@@ -16,14 +16,10 @@ body #main #search {
   border-radius: 10px;
   padding: 15px 20px 15px 20px;
   background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.3);
 }
 body #main #search a {
-  width: 20px;
-  height: 18px;
   margin-right: 13px;
-  text-decoration: none;
-  color: green;
-  font-weight: 700;
 }
 body #main #search input {
   width: 500px;
@@ -37,6 +33,7 @@ body #main #today-cards {
   display: flex;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 body #main #today-cards #today-card {
   position: relative;
