@@ -10,32 +10,121 @@ const colorURL = await filteringColor();
 
 const todayCards = document.querySelector("#today-cards");
 
-function checkRedulp(selected, element) {
+function checkIndex() {
+  let isOkay = true;
+
   if (localStorage.getItem("todayCard") !== null) {
-    const todayArray = JSON.parse(localStorage.getItem("todayCard"));
-    todayArray.forEach((today) => {
-      if (selected == today[element]) {
-        console.log("중복");
-      } else {
-        console.log("No 중복");
-        return selected;
+    while (isOkay == true) {
+      const todayArray = JSON.parse(localStorage.getItem("todayCard"));
+      const phraseIndex = Math.floor(Math.random() * phraseURL.length);
+      let id = 0;
+      todayArray.forEach((arr) => {
+        if (arr.text == phraseURL[phraseIndex].text) {
+          id = 1;
+        }
+      });
+      if (id == 0) {
+        isOkay = false;
+        return phraseIndex;
       }
-    });
+    }
+  } else {
+    const phraseIndex = Math.floor(Math.random() * phraseURL.length);
+    return phraseIndex;
   }
 }
 
-function getRandom(card) {
-  let isOKAY = false;
+function checkEmoji() {
+  let isOkay = true;
 
+  if (localStorage.getItem("todayCard") !== null) {
+    while (isOkay == true) {
+      const todayArray = JSON.parse(localStorage.getItem("todayCard"));
+      const emojiIndex = Math.floor(Math.random() * emojiURL.length);
+      let id = 0;
+      todayArray.forEach((arr) => {
+        if (arr.emoji == emojiURL[emojiIndex].emoji) {
+          id = 1;
+        }
+      });
+      if (id == 0) {
+        isOkay = false;
+        return emojiIndex;
+      }
+    }
+  } else {
+    const emojiIndex = Math.floor(Math.random() * emojiURL.length);
+    return emojiIndex;
+  }
+}
+
+function checkFont() {
+  let isOkay = true;
+
+  if (localStorage.getItem("todayCard") !== null) {
+    while (isOkay == true) {
+      const todayArray = JSON.parse(localStorage.getItem("todayCard"));
+      // console.log(todayArray);
+      const fontIndex = Math.floor(Math.random() * fontURL.length);
+      let id = 0;
+      todayArray.forEach((arr) => {
+        if (arr.font === fontURL[fontIndex].fontFamily) {
+          id = 1;
+        }
+      });
+      if (id == 0) {
+        isOkay = false;
+        return fontIndex;
+      }
+    }
+  } else {
+    const fontIndex = Math.floor(Math.random() * fontURL.length);
+    return fontIndex;
+  }
+}
+
+function checkColor() {
+  let isOkay = true;
+
+  if (localStorage.getItem("todayCard") !== null) {
+    while (isOkay == true) {
+      const todayArray = JSON.parse(localStorage.getItem("todayCard"));
+      const colorIndex = Math.floor(Math.random() * colorURL.length);
+      let id = 0;
+      todayArray.forEach((arr) => {
+        if (arr.color == colorURL[colorIndex].color) {
+          id = 1;
+        }
+      });
+      if (id == 0) {
+        isOkay = false;
+        return colorIndex;
+      }
+    }
+  } else {
+    const colorIndex = Math.floor(Math.random() * colorURL.length);
+    return colorIndex;
+  }
+}
+
+const phraseIndex = checkIndex();
+// console.log(phraseIndex);
+const emojiIndex = checkEmoji();
+// console.log(emojiIndex);
+// const fontIndex = checkFont();
+// console.log(fontIndex);
+const colorIndex = checkColor();
+
+function getRandom(card) {
   const phraseJSON = phraseURL;
   const emojiJSON = emojiURL;
   const fontJSON = fontURL;
   const colorJSON = colorURL;
 
-  const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
-  const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
+  // const phraseIndex = Math.floor(Math.random() * phraseJSON.length);
+  // const emojiIndex = Math.floor(Math.random() * emojiJSON.length);
   const fontIndex = Math.floor(Math.random() * fontJSON.length);
-  const colorIndex = Math.floor(Math.random() * colorJSON.length);
+  // const colorIndex = Math.floor(Math.random() * colorJSON.length);
 
   const selectEmoji = emojiJSON[emojiIndex].emoji;
   const selectFont = fontJSON[fontIndex].fontFamily;
@@ -43,8 +132,6 @@ function getRandom(card) {
   const selectText = phraseJSON[phraseIndex].text;
   const selectAuthor = phraseJSON[phraseIndex].source;
   const selectColor = colorJSON[colorIndex].color;
-
-  console.log(checkRedulp(selectText, "text"));
 
   const cardEmoji = card.querySelector("#emoji");
   const cardText = card.querySelector("#text");
