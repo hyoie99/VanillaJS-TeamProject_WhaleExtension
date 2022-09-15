@@ -50,10 +50,14 @@ if (whichBG == "color") {
 if (localStorage.getItem("bgColor") == "#ffffff") {
   searchBar.querySelector("svg path").setAttribute("fill", "black");
   searchBar.style.border = "2px solid black";
-  searchBar.querySelector("input").style.color = "black";
+  // searchBar.querySelector("input").style.color = "black";
+  searchBar.querySelector("input").style = "black";
+  searchBar.querySelector("input").classList = "";
 } else {
   // searchBar.querySelector("svg path").setAttribute("fill", "green");
   searchBar.style.border = "2px solid white";
+  searchBar.querySelector("input").classList = "bg-white";
+  // searchBar.querySelector("input").style.color = "white";
 }
 
 // const today = new Date().getDate();

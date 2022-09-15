@@ -34,8 +34,17 @@ body {
         border: none;
         font-size: 18px;
         outline: none;
-        color: white;
         background-color: transparent;
+        &::placeholder {
+          color: black;
+          opacity: 1;
+        }
+      }
+      .bg-white {
+        &::placeholder {
+          color: white;
+          opacity: 1;
+        }
       }
     }
     #today-cards {
@@ -50,7 +59,7 @@ body {
         // height: 330px;
         width: 350px;
         height: 400px;
-        margin: 0 25px;
+        margin: 0 15px;
         padding: 20px;
         border-radius: 30px;
         // background-color: rgb(235, 123, 255);

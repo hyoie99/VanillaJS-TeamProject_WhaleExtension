@@ -26,8 +26,15 @@ body #main #search input {
   border: none;
   font-size: 18px;
   outline: none;
-  color: white;
   background-color: transparent;
+}
+body #main #search input::placeholder {
+  color: black;
+  opacity: 1;
+}
+body #main #search .bg-white::placeholder {
+  color: white;
+  opacity: 1;
 }
 body #main #today-cards {
   display: flex;
@@ -39,7 +46,7 @@ body #main #today-cards #today-card {
   position: relative;
   width: 350px;
   height: 400px;
-  margin: 0 25px;
+  margin: 0 15px;
   padding: 20px;
   border-radius: 30px;
   display: flex;
