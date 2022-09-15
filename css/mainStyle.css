@@ -40,6 +40,7 @@ body #main #today-cards {
   display: flex;
   width: 100%;
   text-align: center;
+  justify-content: center;
 }
 body #main #today-cards #today-card {
   position: relative;
