@@ -3,8 +3,13 @@ form {
     // margin-top: 46.5px;
     margin-top: 65px;
     // border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     #today-card {
       margin-bottom: 30px;
+      width: 450px;
+      // height: 400px;
       #data {
         margin: 15px;
         padding: 15px;
@@ -17,6 +22,8 @@ form {
         }
         #text {
           font-size: 24px;
+          word-break: keep-all;
+          // overflow-wrap: break-word;
         }
         #author {
           font-size: 14px;

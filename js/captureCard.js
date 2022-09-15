@@ -9,10 +9,13 @@ function saveAs(url, fileName) {
 
 export function captureCard(event) {
   const cardDiv = event.path[1].previousSibling;
+  // console.log(event.path[2].querySelector("#data").offsetWidth);
   //   cardDiv.style.borderRadius = none;
+
   html2canvas(cardDiv, {
     allowTaint: true,
     useCORS: true,
+    letterRendering: true,
     width: cardDiv.offsetWidth,
     height: cardDiv.offsetHeight,
     scale: 1,
@@ -20,4 +23,9 @@ export function captureCard(event) {
     const imgURL = canvas.toDataURL();
     saveAs(imgURL, "myCard.png");
   });
+
+  // html2canvas(document.getElementById("couponSample1")).then((canvas) => {
+  //   document.getElementById("canvas1").appendChild(canvas);
+  //   let url = document.querySelector("#canvas1 canvas").toDataURL("image/png");
+  // });
 }
