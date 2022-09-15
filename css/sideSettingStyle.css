@@ -5,6 +5,7 @@ form #settings {
 form #settings #setting-title {
   font-size: 18px;
   margin-left: 10px;
+  color: #f27751;
 }
 form #settings #des {
   margin: 20px 0 50px 0;
