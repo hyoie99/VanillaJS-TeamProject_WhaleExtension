@@ -92,20 +92,20 @@ function saveNewCard(emoji, text, author, font, size, color, saveIcon) {
     saveIcon: saveIcon,
   };
 
-  //   if (localStorage.getItem("todayCard") == null) {
-  //     localStorage.setItem("todayCard", JSON.stringify([card]));
-  //   } else {
-  //     const parsedArray = JSON.parse(localStorage.getItem("todayCard"));
-  //     parsedArray.push(card);
-  //     localStorage.setItem("todayCard", JSON.stringify(parsedArray));
-  //   }
-
-  while (isDone == false) {
-    if (localStorage.getItem(`today${id}`) == null) {
-      localStorage.setItem(`today${id}`, JSON.stringify(card));
-      isDone = true;
-    } else {
-      id += 1;
-    }
+  if (localStorage.getItem("todayCard") == null) {
+    localStorage.setItem("todayCard", JSON.stringify([card]));
+  } else {
+    const parsedArray = JSON.parse(localStorage.getItem("todayCard"));
+    parsedArray.push(card);
+    localStorage.setItem("todayCard", JSON.stringify(parsedArray));
   }
+
+  // while (isDone == false) {
+  //   if (localStorage.getItem(`today${id}`) == null) {
+  //     localStorage.setItem(`today${id}`, JSON.stringify(card));
+  //     isDone = true;
+  //   } else {
+  //     id += 1;
+  //   }
+  // }
 }

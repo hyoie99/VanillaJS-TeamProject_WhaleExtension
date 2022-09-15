@@ -71,26 +71,49 @@ if (localStorage.getItem("bgColor") == "#ffffff") {
 //   localStorage.removeItem("today2");
 // }
 
-if (localStorage.getItem("today0") !== null) {
-  getTextCard("today0");
-  if (localStorage.getItem("today1") !== null) {
-    getTextCard("today1");
-    if (localStorage.getItem("today2") !== null) {
-      getTextCard("today2");
-      if (localStorage.getItem("extraContent") !== null) {
-        getExtraCard();
-      } else {
-        addContent();
-      }
-    } else {
-      createTextCard();
-    }
-  } else {
-    createTextCard();
-  }
-} else {
-  createTextCard();
+// if (localStorage.getItem("today0") !== null) {
+//   getTextCard("today0");
+//   if (localStorage.getItem("today1") !== null) {
+//     getTextCard("today1");
+//     if (localStorage.getItem("today2") !== null) {
+//       getTextCard("today2");
+//       if (localStorage.getItem("extraContent") !== null) {
+//         getExtraCard();
+//       } else {
+//         addContent();
+//       }
+//     } else {
+//       createTextCard();
+//     }
+//   } else {
+//     createTextCard();
+//   }
+// } else {
+//   createTextCard();
+// }
+
+const cardArray = localStorage.getItem("todayCard");
+
+// createTextCard();
+// createTextCard();
+// createTextCard();
+if (cardArray != null) {
+  getTextCard(cardArray);
 }
+
+if (cardArray == null) {
+  createTextCard();
+} else if (JSON.parse(cardArray)[1] == null) {
+  createTextCard();
+} else if (JSON.parse(cardArray)[2] == null) {
+  createTextCard();
+} else if (localStorage.getItem("extraContent") == null) {
+  addContent();
+} else {
+  getExtraCard();
+}
+
+console.log(JSON.parse(cardArray));
 
 const main = document.querySelector("#main");
 const form = document.querySelector("form");

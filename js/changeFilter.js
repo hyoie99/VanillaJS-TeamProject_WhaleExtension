@@ -13,9 +13,10 @@ function selectBtn(event) {
   // console.log(targetImg2);
   // console.log(targetBtn[1]);
 
-  localStorage.removeItem("today0");
-  localStorage.removeItem("today1");
-  localStorage.removeItem("today2");
+  // localStorage.removeItem("today0");
+  // localStorage.removeItem("today1");
+  // localStorage.removeItem("today2");
+  localStorage.removeItem("todayCard");
   localStorage.removeItem("extraContent");
 
   btns.forEach((btn) => {

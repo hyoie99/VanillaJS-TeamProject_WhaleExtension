@@ -3,14 +3,8 @@ import { saveSideCard } from "./saveCard.js";
 import { captureCard } from "./captureCard.js";
 
 function openSidebar() {
-  if (localStorage.getItem("today0") !== null) {
-    getTextCard("today0");
-    if (localStorage.getItem("today1") !== null) {
-      getTextCard("today1");
-      if (localStorage.getItem("today2") !== null) {
-        getTextCard("today2");
-      }
-    }
+  if (localStorage.getItem("todayCard") != null) {
+    getTextCard(localStorage.getItem("todayCard"));
   }
 }
 
