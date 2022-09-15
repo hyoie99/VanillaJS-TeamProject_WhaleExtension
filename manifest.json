@@ -1,21 +1,23 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "글마카세",
   "version": "1.0.0",
 
   "description": "확장앱 설명",
+  "icons": {
+    "128": "img/icon/logo.png"
+  },
 
   "sidebar_action": {
     "default_page": "html/sideToday.html",
-    "default_title": "글마카세"
+    "default_title": "글마카세",
+    "default_icon": {
+      "128": "img/icon/logo.png"
+    }
   },
-  "background": {
-    "scripts": ["js/background.js"],
-    "persistent": false
-  },
+  "background": { "service_worker": "js/background.js" },
   "chrome_url_overrides": {
     "newtab": "html/main.html"
   },
-  "permissions": ["tabs", "pageCapture"],
-  "web_accessible_resources": ["json/*.json", "css/*.css"]
+  "permissions": ["tabs"]
 }
